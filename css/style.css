@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, h2 {
   color: #fff;
-  font-family: 'AachenStdBold', Georgia, "Times New Roman", Times, serif;
+  font-family: 'Oswald', sans-serif;
   letter-spacing: 1px;
   text-shadow: 0 2px 1px #666;
   text-transform: uppercase;
@@ -119,11 +119,11 @@ body {
 
 /* ----- @font-face ----- */
 
-@font-face {
+/*@font-face {
   font-family: 'AachenStdBold';
   src: url('font/aachenstdbold.eot');
   src: local('Aachen Std'), local('AachenStd-Bold'), url('font/aachenstdbold.woff') format('woff'), url('font/aachenstdbold.otf') format('opentype'), url('font/aachenstdbold.svg#AachenStd-Bold') format('svg');
-}
+}*/
 
 
 /* ----- Content ----- */
