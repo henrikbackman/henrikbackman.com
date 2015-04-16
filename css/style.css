@@ -121,8 +121,8 @@ body {
 
 @font-face {
   font-family: 'AachenStdBold';
-  src: url('../font/aachenstdbold.eot');
-  src: local('Aachen Std'), local('AachenStd-Bold'), url('../font/aachenstdbold.woff') format('woff'), url('../font/aachenstdbold.otf') format('opentype'), url('../font/aachenstdbold.svg#AachenStd-Bold') format('svg');
+  src: url('font/aachenstdbold.eot');
+  src: local('Aachen Std'), local('AachenStd-Bold'), url('font/aachenstdbold.woff') format('woff'), url('font/aachenstdbold.otf') format('opentype'), url('font/aachenstdbold.svg#AachenStd-Bold') format('svg');
 }
 
 
