@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ungdomstorget.se - Crew</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+	//<![CDATA[
+	function clean() {
+		if (document.getElementById('id_guestbook_body').value == 'Skriv in något här:)') {
+			document.getElementById('id_guestbook_body').value = '';
+			return false;
+		}
+	}
+
+	function imposeMaxLength(obj, max) {
+		//return (Object.value.length <= MaxLen);
+		if (obj.value.length > max) {
+			obj.value = obj.value.substring(0, max);
+		}
+		else  {
+			document.getElementById('guestbook_counter').innerHTML = 'Antal tecken kvar: '+(max - obj.value.length);
+		}
+	}
+	//]]>
+</script>
+
+</head>
+<body>
+
+<div class="wrapper">
+
+
+<div class="banner">
+<a href="index.html"><img src="img/banner_guss2.jpg" alt="" /></a>
+</div>
+
+
+
+
+
+
+
+	<div id="menu">
+	
+		<ul id="main_menu">
+		<li id="nav_hem"><a href="index.html">Hem</a></li>
+		<li id="nav_torget"><a href="torget.html">Torget</a></li>
+		<li id="nav_wiki"><a href="wiki.html">Wiki</a></li>
+		<li id="nav_utbildning"><a href="utbildning.html">Utbildningar</a></li>
+		<li id="nav_lokalt"><a href="lokalt.html">Lokalt</a></li>
+		<li id="nav_crew"><a href="crew.html" class="active">Crew</a></li>
+		<li id="nav_utrops"><a href="utrops.html">Utropstecknet</a></li>
+		</ul>
+		
+		<ul id="sub_menu" class="crew">
+		<li><a href="crew.html" class="active">Om oss</a></li>
+		<li><a href="#">Kontakta oss</a></li>
+		<li><a href="#">Crew-kalender</a></li>
+		</ul>			
+
+	</div>
+
+
+
+
+
+
+
+
+
+<div class="holdright">
+
+<div class="right">
+	<h1>Logga in</h1><br />
+	<form action="" method="post">
+	<p>
+	OpenID
+	<input type="text" name="email" onfocus="this.value=''; return false;" value="http://exempel.mittid.se" />
+	</p>
+	<p>
+	<input type="submit" name="login" value="Logga in" class="submit" /></p><p><a href="#">Registrera dig</a>
+	</p>			
+	</form>
+		<br /><br />
+	<h1>Senast inloggade</h1><br />
+	<img src="img/nopic2.jpg" alt="" />
+	<img src="img/nopic2.jpg" alt="" />
+	<img src="img/nopic2.jpg" alt="" />
+	<img src="img/linnea.jpeg" alt="" />
+	<img src="img/nopic2.jpg" alt="" />
+
+	<img src="img/nopic2.jpg" alt="" />
+	<img src="img/nopic2.jpg" alt="" />
+	<img src="img/nopic2.jpg" alt="" />
+	<img src="img/nopic2.jpg" alt="" />
+	<img src="img/nopic2.jpg" alt="" />
+</div>
+
+	<div id="left" class="hem">
+		<h1>Skrik</h1><br />
+		<div id="righthead"><img src="img/nopic2.jpg" alt="" /></div><a href="#">Kristoffer</a><br />hej alla fina! sitter på styrelsemöte och tänker på er!<br />Puss
+			<br /><br />
+		<div id="righthead"><img src="img/linnea.jpeg" alt="" /></div><a href="#">Linnea</a><br />Välkommen till killarna från Hyper Island som kommer smyga runt här på sidan den närmaste månaden och titta på hur man kan göra ungdomstorget.se ännu bättre!<br />Kramar till dem!
+			<br /><br />
+		<div id="righthead"><img src="img/nopic2.jpg" alt="" /></div><a href="#">Theresia</a><br />Sveriges Ungdomsråds styrelse har styrelsemöte 16-18 maj. Har ni något ni vill meddela dem släng iväg ett mail till styrelsen@sverigesungdomsrad.se
+			<br /><br />
+		<div id="righthead"><img src="img/nopic2.jpg" alt="" /></div><a href="#">Theresia</a><br />Sveriges Ungdomsråd finns på Urix. Leta upp Kristoffer, Nathalie, Boris eller Björn där. De håller en workshop med Malmös Unga, står på mässan och minglar runt bland deltagare !<br /><h2><a href="#">Läs alla</a></h2>
+		<br /><br />
+
+<textarea rows="4" cols="34" name="guestbook_body" id="id_guestbook_body" onkeyup="imposeMaxLength(this, 200);" onfocus="this.value=''; return false;" />Skriv in något här.</textarea><br />
+			<span id="guestbook_counter">Antal tecken kvar: 200</span><br />
+			<input type="submit" name="submit" value="Skicka" />
+
+		</div>
+		
+	<div id="left" class="crew">
+		<h1>Styrelsemöte</h1><br />
+		Sveriges Ungdomsråds styrelse har styrelsemöte 16-18 maj. Har ni något ni vill meddela dem släng iväg ett mail till 								styrelsen@sverigesungdomsrad.se
+		</div>
+		
+	<div id="left" class="crew">
+		<h1>Arbete pågår</h1><br />
+		Välkommen till killarna från Hyper Island som kommer smyga runt här på sidan den närmaste månaden och titta på hur man kan göra 					ungdomstorget.se ännu bättre!
+		</div>
+		
+	<div id="left" class="crew">
+		<h1>Styrelsemöte</h1><br />
+		Sveriges Ungdomsråds styrelse har styrelsemöte 16-18 maj. Har ni något ni vill meddela dem släng iväg ett mail till 								styrelsen@sverigesungdomsrad.se
+		</div>
+
+
+</div>
+
+<div class="holdleft">
+	<div id="post" class="crew">
+		<div id="posthead"><img src="img/crew.png" alt="" /></div>
+		<h1><a href="#">Internationellt och såntdärna tufft?</a></h1>
+	<br />Jag har funderat rätt så mycket över ungdomsråd och internationellt arbete. Hur går man till väga i det lokala ungdomsrådet och hur kan man ta hjälp (Om man nu ska/vill/behöver) ta hjälp av Sveriges Ungdomsråd. Min vision är att på något sätt engagera ungdomar, eller ja, människor i allmänhet i internationella frågor. Eller typ, nationella frågor som på något sätt har en internationell koppling.<br /><br />Men nu undrar jag om det finns intresse bland er medlemmar att arbeta med motsvarande organisationer utomlands, eller om ni redan arbetar med liknande organisationer; Hur har det fungerat? Hur går ni tillväga? Vad har ni lärt er?<h2><a href="#">Läs mer</a></h2>
+	</div>
+	
+	<div id="post" class="crew">
+		<div id="posthead"><img src="img/crew.png" alt="" /></div>
+		<h1><a href="#">Internationellt och såntdärna tufft?</a></h1>
+	<br /><img src="img/orddemo.jpg" alt="" /><br />Jag har funderat rätt så mycket över ungdomsråd och internationellt arbete. Hur går man till väga i det lokala ungdomsrådet och hur kan man ta hjälp (Om man nu ska/vill/behöver) ta hjälp av Sveriges Ungdomsråd. Min vision är att på något sätt engagera ungdomar, eller ja, människor i allmänhet i internationella frågor. Eller typ, nationella frågor som på något sätt har en internationell koppling.<br /><br /><h2><a href="#">Läs mer</a></h2>
+	</div>
+	
+	<div id="post" class="crew">
+		<div id="posthead"><img src="img/crew.png" alt="" /></div>
+		<h1><a href="#">Internationellt och såntdärna tufft?</a></h1>
+	<br />Jag har funderat rätt så mycket över ungdomsråd och internationellt arbete. Hur går man till väga i det lokala ungdomsrådet och hur kan man ta hjälp (Om man nu ska/vill/behöver) ta hjälp av Sveriges Ungdomsråd. Min vision är att på något sätt engagera ungdomar, eller ja, människor i allmänhet i internationella frågor. Eller typ, nationella frågor som på något sätt har en internationell koppling.<br /><br />Men nu undrar jag om det finns intresse bland er medlemmar att arbeta med motsvarande organisationer utomlands, eller om ni redan arbetar med liknande organisationer; Hur har det fungerat? Hur går ni tillväga? Vad har ni lärt er?<h2><a href="#">Läs mer</a></h2>
+	</div>
+	
+	<div id="post" class="crew">
+		<div id="posthead"><img src="img/crew.png" alt="" /></div>
+		<h1><a href="#">Internationellt och såntdärna tufft?</a></h1>
+	<br />Jag har funderat rätt så mycket över ungdomsråd och internationellt arbete. Hur går man till väga i det lokala ungdomsrådet och hur kan man ta hjälp (Om man nu ska/vill/behöver) ta hjälp av Sveriges Ungdomsråd. Min vision är att på något sätt engagera ungdomar, eller ja, människor i allmänhet i internationella frågor. Eller typ, nationella frågor som på något sätt har en internationell koppling.<br /><br />Men nu undrar jag om det finns intresse bland er medlemmar att arbeta med motsvarande organisationer utomlands, eller om ni redan arbetar med liknande organisationer; Hur har det fungerat? Hur går ni tillväga? Vad har ni lärt er?<h2><a href="#">Läs mer</a></h2>
+	</div>
+	
+	<div id="post" class="crew">
+		<div id="posthead"><img src="img/crew.png" alt="" /></div>
+		<h1><a href="#">Internationellt och såntdärna tufft?</a></h1>
+	<br />Jag har funderat rätt så mycket över ungdomsråd och internationellt arbete. Hur går man till väga i det lokala ungdomsrådet och hur kan man ta hjälp (Om man nu ska/vill/behöver) ta hjälp av Sveriges Ungdomsråd. Min vision är att på något sätt engagera ungdomar, eller ja, människor i allmänhet i internationella frågor. Eller typ, nationella frågor som på något sätt har en internationell koppling.<br /><br />Men nu undrar jag om det finns intresse bland er medlemmar att arbeta med motsvarande organisationer utomlands, eller om ni redan arbetar med liknande organisationer; Hur har det fungerat? Hur går ni tillväga? Vad har ni lärt er?<h2><a href="#">Läs mer</a></h2>
+	</div>
+	
+	
+	
+</div>
+
+<div class="foot"><a href="#">Om oss</a> - <a href="http://www.sverigesungdomsrad.se">SverigesUngdomsråd.se</a> - <a href="#">Hjälp och FAQ</a></div>
+
+<br class="clear" />
+</div>
+</body>
+</html>

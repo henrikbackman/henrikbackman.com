@@ -1,0 +1,228 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* ----- Reset ----- */
+
+a, b, body, center, del, div, em, fieldset, form, html, h1, h2, h3, h4, h5, h6, i, iframe, img, li, label, object, ol, p, pre, span, strong, table, tbody, td, th, tr, u, ul { background: transparent; border: 0; margin: 0; outline: 0; padding: 0; vertical-align: baseline; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* ----- Body ----- */
+
+body {
+	background: #fff url(../img/bg.jpg) center 0 repeat;
+	color: #505050;
+	font: 12px/20px /*Myriad Pro, */'MyriadProRegular', Helvetica, Arial, Verdana, sans-serif;
+	}
+	
+body, html 		{ width: 100%; }
+html 			{ height: 100%; overflow-y: scroll; }
+
+a 				{ color: #08f; text-decoration: none; }
+a:hover 		{ color: #08f; text-decoration: underline; }
+
+.clear 			{ clear: both; }
+
+.float_left 	{ float: left; }
+.float_right 	{ float: right; }
+
+p				{ margin: 0 0 10px; }
+
+
+/* ----- @font-face ----- */
+
+@font-face {
+	font-family: 'MyriadProRegular';
+	src: url(../font/myriadpro-regular-webfont.eot);
+	src: local('☺'), url(../font/myriadpro-regular-webfont.woff) format('woff'), url(../font/myriadpro-regular-webfont.otf) format('opentype'), url(../font/myriadpro-regular-webfont.svg#webfont) format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 30px;
+	font-weight: normal;
+	line-height: 40px;
+	}
+
+h1 { color: #e94c37; }
+h2 { color: #f59715; }
+
+
+/* ----- Menu ----- */
+
+ul#menu {
+	display: block;
+	list-style: none;
+	margin: -40px auto 0;
+	position: relative;
+	width: 409px;
+	z-index: 1;
+	}
+	
+	ul#menu li { float: left; }
+	
+	ul#menu li a {
+		float: left;
+		overflow: hidden;
+		text-indent: -9999px;
+		}
+		
+		ul#menu li#stockholm a {
+			background: url(../img/menu.gif) 0 0 no-repeat;
+			height: 24px;
+			width: 110px;
+			}
+		
+		ul#menu li#uppsala a {
+			background: url(../img/menu.gif) -154px -1px no-repeat;
+			height: 24px;
+			margin: 0 43px 0 44px;
+			width: 80px;
+			}
+		
+		ul#menu li#travel a {
+			background: url(../img/menu.gif) -279px -1px no-repeat;
+			height: 48px;
+			width: 130px;
+			}
+
+
+/* ----- Content ----- */
+
+div#page_wrap {
+	display: block;
+	margin: 0 auto;
+	width: 850px;
+	}
+
+div#index {
+	float: left;
+	margin: 54px 0 0 68px;
+	width: 713px;
+	}
+
+div#top {
+	float: left;
+	height: 320px;
+	padding: 18px 0 0;
+	position: relative;
+	text-transform: uppercase;
+	width: 850px;
+	z-index: 1;
+	}
+	
+	div#top div#image {
+		float: left;
+		height: 304px;
+		width: 609px;
+		}
+	
+	div#top div#menu {
+		background: url(../img/sidebar.jpg) 0 0 no-repeat;
+		float: left;
+		height: 320px;
+		width: 224px;
+		}
+	
+		div#top div#menu a.logo {
+			float: left;
+			height: 64px;
+			margin: -8px 0 0 -14px;
+			width: 238px;
+			}
+		
+		div#top div#menu span {
+			color: #fff;
+			float: right;
+			font-size: 10px;
+			margin: -10px 20px 0 0;
+			}
+	
+		div#top div#menu ul {
+			float: left;
+			list-style: none;
+			height: 347px;
+			padding: 10px 0 0 30px;
+			width: 190px;
+			}
+			
+			div#top div#menu ul li {
+				float: left;
+				width: 190px;
+				}
+			
+			div#top div#menu ul li a {
+				background: url(../img/star.png) 0 0 no-repeat;
+				float: left;
+				color: #fff;
+				font-size: 16px;
+				margin: 0 0 10px;
+				padding: 0 0 0 30px;
+				}
+				
+				div#top div#menu ul li a:hover,
+				div#top div#menu ul li a.active {
+					color: #c72e17;
+					text-decoration: none;
+					}
+
+div#leaf {
+	background: url(../img/leaf.png) 0 0 no-repeat;
+	float: left;
+	height: 169px;
+	left: 50%;
+	margin: 45px 0 0 -488px;
+	position: absolute;
+	width: 63px;
+	}
+
+div#content {
+	background: #fff;
+	float: left;
+	margin: -16px 0 0 1px;
+	width: 832px;
+	}
+	
+	div#content div.side {
+		background: url(../img/side.png) 0 0 no-repeat;
+		float: left;
+		height: 357px;
+		padding: 20px 22px 0 26px;
+		width: 179px;
+		}
+	
+	div#content div.text {
+		float: left;
+		height: 352px;
+		overflow-y: scroll;
+		padding: 25px 39px 0 38px;
+		width: 528px;
+		}
+		
+		div#content div.text p { margin: 0 0 20px; }
+	
+
+/* ----- Special ----- */
+
+div#footer {
+	background: url(../img/footer.png) 0 0 no-repeat;
+	color: #ec5927;
+	display: block;
+	height: 80px;
+	left: 50%;
+	margin: 0 0 0 -430px;
+	padding: 10px 0 0 80px;
+	position: relative;
+	width: 754px;
+	}
+	
+	div#footer a { color: #ec5927; }
+	
+	div#footer div.column {
+		float: left;
+		width: 144px;
+		}
+		
+		div#footer div.column span { font-weight: bold; }

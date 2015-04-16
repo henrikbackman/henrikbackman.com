@@ -1,0 +1,162 @@
+#month {
+	width: 750px;
+	}
+	
+#month ul {
+	margin: 10px;
+	width: 730px;
+	height: 28px;
+	background: url(../img/month_bg.jpg) no-repeat 0 0;
+	}	
+	
+#month li {
+	padding: 7px 10px 4px 10px;
+	width: 223px;
+	float: left;
+	}
+	
+#month li.prev { text-align: left; }
+#month li.this { text-align: center; }
+#month li.next { text-align: right; }
+
+#month li.prev a { 
+	color: #808080; 
+	padding: 0 0 0 15px;
+	background: url(../img/prev.gif) no-repeat left center;
+	}
+
+#month li.this a { color: #000000; }
+
+#month li.next a { 
+	color: #808080; 
+	padding: 0 15px 0 0;
+	background: url(../img/next.gif) no-repeat right center;	
+	}
+
+#kalender {
+	padding: 5px 0 20px 5px;
+	float:left;
+	}
+
+#kalender table {
+	float: right;
+	width: 749px;
+	border-collapse: collapse;
+	border-bottom: #d0d0d0 1px solid;
+	}
+
+#kalender table tr {
+	background: #d0d0d0;
+	border-left: #d0d0d0 1px solid;
+	}
+	
+#kalender table tr.days {
+	background: transparent url(../img/days_bg.jpg) no-repeat left bottom;
+	border: none;
+	}
+	
+#kalender table tr.days td {
+	padding: 5px;
+	border: none;
+	height: auto;
+	}		
+	
+#kalender table td {
+	width: 106px;
+	height: 90px;
+	vertical-align: top;
+	border: #d0d0d0 1px solid;
+	border-width: 1px 1px 0 0;
+	}
+	
+#kalender table a {
+	width: 106px;
+	height: 90px;
+	background: #ff0000;
+	font-size: 0px;
+	line-height: 0px;
+	text-indent: -9999px;
+	text-decoration: none;
+	display: block;
+	}
+	
+#kalender table a span {
+	padding: 10px;
+	width: 86px;
+	height: 70px;
+	position: relative;
+	top: 0;
+	left: 0;
+	color: #000;
+	font-size: 12px;
+	line-height: 1.4em;	
+	font-weight: bold;
+	text-indent: 0px;
+	display: block;
+	}
+	
+#kalender table a span em {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	color: #808080;
+	font-weight: normal;	
+	font-style: normal;
+	font-size: 10px;
+	}	
+
+#kalender table a.day1  { background: url(../img/kalender/day1.jpg) no-repeat 0 0; }	
+#kalender table a.day2  { background: url(../img/kalender/day2.jpg) no-repeat 0 0; }	
+#kalender table a.day3  { background: url(../img/kalender/day3.jpg) no-repeat 0 0; }
+#kalender table a.day4  { background: url(../img/kalender/day4.jpg) no-repeat 0 0; }
+#kalender table a.day5  { background: url(../img/kalender/day5.jpg) no-repeat 0 0; }
+#kalender table a.day6  { background: url(../img/kalender/day6.jpg) no-repeat 0 0; }
+#kalender table a.day7  { background: url(../img/kalender/day7.jpg) no-repeat 0 0; }
+#kalender table a.day8  { background: url(../img/kalender/day8.jpg) no-repeat 0 0; }
+#kalender table a.day9  { background: url(../img/kalender/day9.jpg) no-repeat 0 0; }
+#kalender table a.day10 { background: url(../img/kalender/day10.jpg) no-repeat 0 0; }
+#kalender table a.day11 { background: url(../img/kalender/day11.jpg) no-repeat 0 0; }
+#kalender table a.day12 { background: url(../img/kalender/day12.jpg) no-repeat 0 0; }
+#kalender table a.day13 { background: url(../img/kalender/day13.jpg) no-repeat 0 0; }
+#kalender table a.day14 { background: url(../img/kalender/day14.jpg) no-repeat 0 0; }
+#kalender table a.day15 { background: url(../img/kalender/day15.jpg) no-repeat 0 0; }
+#kalender table a.day16 { background: url(../img/kalender/day16.jpg) no-repeat 0 0; }
+#kalender table a.day17 { background: url(../img/kalender/day17.jpg) no-repeat 0 0; }
+#kalender table a.day18 { background: url(../img/kalender/day18.jpg) no-repeat 0 0; }
+#kalender table a.day19 { background: url(../img/kalender/day19.jpg) no-repeat 0 0; }
+#kalender table a.day20 { background: url(../img/kalender/day20.jpg) no-repeat 0 0; }
+#kalender table a.day21 { background: url(../img/kalender/day21.jpg) no-repeat 0 0; }
+#kalender table a.day22 { background: url(../img/kalender/day22.jpg) no-repeat 0 0; }
+#kalender table a.day23 { background: url(../img/kalender/day23.jpg) no-repeat 0 0; }
+#kalender table a.day24 { background: url(../img/kalender/day24.jpg) no-repeat 0 0; }
+#kalender table a.day25 { background: url(../img/kalender/day25.jpg) no-repeat 0 0; }
+#kalender table a.day26 { background: url(../img/kalender/day26.jpg) no-repeat 0 0; }
+#kalender table a.day27 { background: url(../img/kalender/day27.jpg) no-repeat 0 0; }
+#kalender table a.day28 { background: url(../img/kalender/day28.jpg) no-repeat 0 0; }
+#kalender table a.day29 { background: url(../img/kalender/day29.jpg) no-repeat 0 0; }
+#kalender table a.day30 { background: url(../img/kalender/day30.jpg) no-repeat 0 0; }
+#kalender table a.day31 { background: url(../img/kalender/day31.jpg) no-repeat 0 0; }
+	
+#kalender table a.red {
+	background-position: 0 -180px;
+	}	
+	
+#kalender table a:hover, #kalender table a.active {
+	background-position: 0 -90px;
+	}
+
+/* weekend */
+
+#kalender table td.saturday a, #kalender table td.sunday a {
+	background-position: -106px 0;
+	}	
+
+#kalender table td.saturday a.red,
+#kalender table td.sunday a.red {
+	background-position: -106px -180px;
+	}	
+
+#kalender table td.saturday a:hover, #kalender table td.saturday a.active,		
+#kalender table td.sunday a:hover, #kalender table td.sunday a.active {
+	background-position: -106px -90px;
+	}

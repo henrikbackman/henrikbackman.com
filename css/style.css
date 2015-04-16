@@ -1,0 +1,199 @@
+/*! By Henrik Backman - henrikbackman.com */
+
+/* ----- Base ----- */
+
+html {
+	font-size: 100%;
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+	    -ms-text-size-adjust: 100%;
+}
+
+html, button, input, select, textarea { font-family: sans-serif; }
+
+body { margin: 0; }
+
+::-moz-selection	{ background: #999; color: #fff; text-shadow: none; }
+::selection			{ background: #999; color: #fff; text-shadow: none; }
+
+
+/* ----- Links ----- */
+
+a {
+	color: #444;
+	text-decoration: underline;
+	-webkit-tap-highlight-color: rgba(81, 81, 81, 0.5);
+}
+
+a:hover {
+	color: #c00;
+	outline: 0;
+	text-decoration: underline;
+}
+
+
+/* ----- Typography ----- */
+
+h1 {
+	font-size: 3.8em;
+	margin: 0.67em 0 0.2em;
+}
+
+h2 {
+	font-size: 1.8em;
+	margin: 0.83em 0 0.4em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	display: block;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1;
+}
+
+h1, h2 {
+	color: #fff;
+	font-family: 'AachenStdBold', Georgia, "Times New Roman", Times, serif;
+	letter-spacing: 1px;
+	text-shadow: 0 2px 1px #666;
+	text-transform: uppercase;
+}
+
+p { margin: 1em 0; }
+
+img {
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .05);
+	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, .05);
+	-ms-box-shadow: 0 0 20px rgba(0, 0, 0, .05);
+	-o-box-shadow: 0 0 20px rgba(0, 0, 0, .05);
+	box-shadow: 0 0 20px rgba(0, 0, 0, .05);
+	border: 0;
+	display: block;
+	image-rendering: optimizeQuality;
+	width: 100%;
+	-ms-interpolation-mode: bicubic;
+}
+
+figure {
+	display: block;
+	margin: 0;
+	position: relative;
+}
+
+figcaption {
+	display: block;
+	margin: 5px 0 0;
+}
+
+
+/* ----- Misc ----- */
+
+.clearfix:before, .clearfix:after {
+	clear: both;
+	content: "\0020";
+	float: none !important;
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	*zoom: 1;
+}
+
+
+/* ----- CONTENT ----- */
+
+body {
+	background-color: #8b9da9;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#8b9da9), to(#d0e0ea));
+	background-image: -webkit-linear-gradient(top, #8b9da9, #d0e0ea);
+	background-image:    -moz-linear-gradient(top, #8b9da9, #d0e0ea);
+	background-image:      -o-linear-gradient(top, #8b9da9, #d0e0ea);
+	background-image:         linear-gradient(to bottom, #8b9da9, #d0e0ea);
+	box-shadow: inset 0 0 100px hsla(0, 0%, 0%, .3);
+	color: #333;
+	font-size: .75em;
+	letter-spacing: .3px;
+	line-height: 1.5em;
+}
+
+
+/* ----- @font-face ----- */
+
+@font-face {
+	font-family: 'AachenStdBold';
+	src: url('/font/aachenstdbold.eot');
+	src: local('Aachen Std'), local('AachenStd-Bold'), url('/font/aachenstdbold.woff') format('woff'), url('/font/aachenstdbold.otf') format('opentype'), url('/font/aachenstdbold.svg#AachenStd-Bold') format('svg');
+}
+
+
+/* ----- Content ----- */
+
+#wrap {
+	height: auto;
+	margin: 0 auto;
+	padding: 50px 20px 30px;
+	width: 945px; 
+}
+
+#header {
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0 0 50px 0;
+	text-align: center;
+	width: 100%; 
+}
+	
+	#header .sub { color: #333; }
+
+.project {
+	float: left;
+	margin: 0 1% 20px;
+	width: 48%;
+}
+
+#contact {
+	float: left;
+	margin: 0 1% 20px;
+	width: 98%;
+}
+
+	#contact ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+
+/* ---- MQs ---- */
+
+@media only screen and (max-width : 985px) {
+	
+	#wrap { width: auto; }
+	
+}
+
+@media only screen and (max-width : 920px) {
+	
+	h2 { font-size: 1.4em; }
+	
+	h1, h2 { text-shadow: 0 1px 0 #555; }
+	
+}
+
+
+@media only screen and (max-width : 720px) {
+	
+	.project { width: 98%; }
+	
+	h2 { font-size: 2em; }
+	
+}
+
+@media only screen and (max-width : 525px) {
+	
+	h1 { font-size: 2.2em; }
+	
+	h2 { font-size: 1.2em; }
+	
+}

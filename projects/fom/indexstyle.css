@@ -1,0 +1,311 @@
+@charset "UTF-8";
+
+/* body, html{
+	padding: 0;
+	margin: 0;
+	background: transparent;
+    }
+*/
+*	{
+	border:  none;
+	outline: none;
+	}
+/*	
+* {
+	margin: 0;
+	padding: 0;
+}
+*/
+
+/* Hans */
+
+body {
+	font-size: 62.5%;
+	font-family: Georgia, serif;
+	overflow: hidden;
+}
+
+/* @group PRESS */
+
+#press {
+	width: 17.8%;
+	height: 15.5%;
+	z-index: 6000;
+	margin-left: 8.9%;
+	margin-top: 7.1%;
+	position: relative;
+	overflow: hidden;
+	}
+	
+/*end*/
+/*\*/
+html*#press {
+	[margin-left: 8.9%;
+	[margin-top: 7.1%;
+	margin-left: 8.9%;
+	margin-top: 7.1%;
+	]margin-left: 8.9%;
+	]margin-top: 7.1%;
+}/*end*/
+.dummyend[id]{
+	clear:both;
+}
+
+/*\*/
+* html #press {
+	margin-left: 8.9%;
+	margin-top: 7.1%;
+}
+
+/* @end */
+
+/* @group TACKTILL */
+
+#tacktill {
+	width: 16.3%;
+	height: 15.5%;
+	z-index: 6000;
+	margin-left: 32.5%;
+	margin-top: -4.4%;
+	position: relative;
+	overflow: hidden;
+	}
+	
+/*end*/
+/*\*/
+html*#tacktill {
+	[margin-left: 32.5%;
+	[margin-top: -4.4%;
+	margin-left: 32.6%;
+	margin-top: -4.3%;
+	]margin-left: 32.5%;
+	]margin-top: -4.4%;
+}/*end*/
+.dummyend[id]{
+	clear:both;
+}
+
+/*\*/
+* html #tacktill {
+	margin-left: 32.5%;
+	margin-top: -4.4%;
+}
+
+/* @end */
+
+/* @group KONTAKT */
+
+#kontakt {
+	width: 19%;
+	height: 15.5%;
+	z-index: 6000;
+	margin-left: 62.2%;
+	margin-top: -4%;
+	position: relative;
+	overflow: hidden;
+	}
+	
+/*end*/
+/*\*/
+html*#kontakt {
+	[margin-left: 62.2%;
+	[margin-top: -4%;
+	margin-left: 62.3%;
+	margin-top: -3.7%;
+	]margin-left: 62.5%;
+	]margin-top: -4.8%;
+}/*end*/
+.dummyend[id]{
+	clear:both;
+}
+
+/*\*/
+* html #kontakt {
+	margin-left: 62.2%;
+	margin-top: -4%;
+}
+/*end*/
+
+/* @end */
+
+/* @group FILM */
+
+#film {
+	width: 19%;
+	height: 15.5%;
+	z-index: 6000;
+	margin-left: 73.5%;
+	margin-top: 7.5%;
+	position: relative;
+	overflow: hidden;
+	}
+	
+/*end*/
+/*\*/
+html*#film {
+	[margin-left: 73.5%;
+	[margin-top: 7.5%;
+	margin-left: 73.6%;
+	margin-top: 7.5%;
+	]margin-left: 73.6%;
+	]margin-top: 7.2%;
+}/*end*/
+.dummyend[id]{
+	clear:both;
+}
+
+/*\*/
+* html #film {
+	margin-left: 73.5%;
+	margin-top: 7.5%;
+}
+/*end*/
+
+/* @end */
+
+/* @group OM OSS */
+
+#omoss {
+	width: 22.5%;
+	height: 15.5%;
+	z-index: 6000;
+	margin-left: 36.6%;
+	margin-top: -4.8%;
+	position: relative;
+	overflow: hidden;
+	}
+	
+/*end*/
+/*\*/
+html*#omoss {
+	[margin-left: 36.6%;
+	[margin-top: -4.8%;
+	margin-left: 36.9%;
+	margin-top: -4.8%;
+	]margin-left: 36.4%;
+	]margin-top: -4.8%;
+}/*end*/
+.dummyend[id]{
+	clear:both;
+}
+
+/*\*/
+* html #omoss {
+	margin-left: 36.6%;
+	margin-top: -4.8%;
+}
+/*end*/
+
+/* @end */
+
+/* @group blifarsa */
+
+#blifarsa {
+	width: 34%;
+	height: 15.5%;
+	z-index: 6000;
+	margin-left: 55%;
+	margin-top: 6%;
+	position: relative;
+	overflow: hidden;
+	}
+	
+/*end*/
+/*\*/
+html*#blifarsa {
+	[margin-left: 55%;
+	[margin-top: 6%;
+	margin-left: 55%;
+	margin-top: 6.3%;
+	]margin-left: 55.2%;
+	]margin-top: 6.1%;
+}/*end*/
+.dummyend[id]{
+	clear:both;
+}
+
+/*\*/
+* html #blifarsa {
+	margin-left: 55%;
+	margin-top: 6%;
+}
+/*end*/
+
+/* @end */
+
+/* @group Gebidrag */
+
+#gebidrag {
+	width: 25.5%;
+	height: 15.5%;
+	z-index: 6000;
+	margin-left: 11%;
+	margin-top: -2.8%;
+	position: relative;
+	overflow: hidden;
+	}
+	
+/*end*/
+/*\*/
+html*#gebidrag {
+	[margin-left: 11%;
+	[margin-top: -2.8%;
+	margin-left: 11.5%;
+	margin-top: -3.1%;
+	]margin-left: 11%;
+	]margin-top: -2.4%;
+}/*end*/
+.dummyend[id]{
+	clear:both;
+}
+
+/*\*/
+* html #gebidrag {
+	margin-left: 11%;
+	margin-top: -2.8%;
+}
+/*end*/
+
+/* @end */
+
+
+/* IE7 snyggar till bilder som skalas ner*/
+img {
+	-ms-interpolation-mode : bicubic;
+}
+
+.bg {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5000;
+}
+
+/* #extended-forecast {
+	position: relative;
+	top: 0px;
+	display: none;
+}
+
+#tab {
+	width: 200px;
+	height: 36px;
+	background: url(images/tab-bg.png) no-repeat;
+	position: absolute;
+	z-index: 9999;
+	top: 0px;
+	left: 50px;
+} */
+
+
+
+/* Mitt */
+
+
+#bg{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	}

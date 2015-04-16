@@ -1,0 +1,910 @@
+html, body {
+	width:  100%;
+	height: 100%;
+	}
+
+body {
+	margin:  0;
+	padding: 0;
+	color: #444;
+	font: 12px/1.4em arial, helvetica, sans-serfi;
+	background: url(../img/bg.jpg) repeat 0 0;
+	}
+
+*	{
+	margin:  0;
+	padding: 0;
+	border:  none;
+	outline: none;
+	}
+
+a,
+a:link,
+a:visited 
+	{
+	color: #429ed1;
+	text-decoration: none;
+	}
+
+a:hover {
+	text-decoration: underline;
+	}
+
+ul, li {
+	list-style-type: none;
+	}
+
+.clear {
+	clear: both;
+	}
+	
+.left {
+	float: left;
+	}
+	
+.right {
+	float: right;
+	}
+	
+.img_right {
+	margin: 0 0 10px 10px;
+	float: right;
+	}
+
+/*
+---------------------------------------------------------------------
+Wrap
+---------------------------------------------------------------------
+*/
+
+#outer_wrap {
+	background: url(../img/wrap_bg.jpg) repeat-x 0 0;
+	}
+
+#wrap {
+	margin: 0 auto;
+	width:  960px;
+	height: auto;
+	background: #fff;
+	}
+
+/*
+---------------------------------------------------------------------
+Header
+---------------------------------------------------------------------
+*/
+
+#header {
+	padding: 20px;
+	width: 920px;
+	float:left;
+	}
+
+#header h1 {
+	width: 256px;
+	height: 90px;
+	background: url(../img/logo.jpg) no-repeat left center;
+	text-indent: -9999px;
+	float: left;
+	}
+	
+#header .banner_465x90 {
+	width:  645px;
+	height: 90px;
+	float:  right;
+	display: block;
+	}
+	
+/*
+---------------------------------------------------------------------
+Menu
+---------------------------------------------------------------------
+*/
+
+#menu {
+	margin: 0 20px 15px 20px;
+	width: auto;
+	clear: both;
+	}
+	
+#menu ul li {
+	float: left;
+	}
+
+/* main menu */
+	
+#main_menu {
+	width: 920px;
+	height: 45px;
+	background: #000 url(../img/main_menu.jpg) no-repeat 0 0;
+	}
+	
+#main_menu li a { 
+	height: 45px;
+	text-indent: -9999px;
+	display: block;
+	}
+
+#main_menu li#nav_hem a						{ width: 57px; }	
+#main_menu li#nav_hem a:hover				{ background: url(../img/main_menu.jpg) no-repeat 0 -45px; }
+#main_menu li#nav_hem a.active,
+#main_menu li#nav_hem a.active:hover		{ background: url(../img/main_menu.jpg) no-repeat 0 -90px; }
+
+#main_menu li#nav_artiklar a				{ width: 86px; }	
+#main_menu li#nav_artiklar a:hover			{ background: url(../img/main_menu.jpg) no-repeat -57px -45px; }
+#main_menu li#nav_artiklar a.active,
+#main_menu li#nav_artiklar a.active:hover	{ background: url(../img/main_menu.jpg) no-repeat -57px -90px; }
+
+#main_menu li#nav_bloggar a					{ width: 84px; }	
+#main_menu li#nav_bloggar a:hover			{ background: url(../img/main_menu.jpg) no-repeat -143px -45px; }
+#main_menu li#nav_bloggar a.active,
+#main_menu li#nav_bloggar a.active:hover 	{ background: url(../img/main_menu.jpg) no-repeat -143px -90px; }
+
+#main_menu li#nav_recept a					{ width: 83px; }	
+#main_menu li#nav_recept a:hover			{ background: url(../img/main_menu.jpg) no-repeat -227px -45px; }
+#main_menu li#nav_recept a.active,
+#main_menu li#nav_recept a.active:hover		{ background: url(../img/main_menu.jpg) no-repeat -227px -90px; }
+
+#main_menu li#nav_kalender a				{ width: 91px; }	
+#main_menu li#nav_kalender a:hover			{ background: url(../img/main_menu.jpg) no-repeat -310px -45px; }
+#main_menu li#nav_kalender a.active,
+#main_menu li#nav_kalender a.active:hover	{ background: url(../img/main_menu.jpg) no-repeat -310px -90px; }
+
+#main_menu li#nav_bostader a				{ width: 90px; }	
+#main_menu li#nav_bostader a:hover			{ background: url(../img/main_menu.jpg) no-repeat -401px -45px; }
+#main_menu li#nav_bostader a.active,
+#main_menu li#nav_bostader a.active:hover	{ background: url(../img/main_menu.jpg) no-repeat -401px -90px; }
+
+#main_menu li#nav_rabatter a				{ width: 89px; }	
+#main_menu li#nav_rabatter a:hover			{ background: url(../img/main_menu.jpg) no-repeat -491px -45px; }
+#main_menu li#nav_rabatter a.active,
+#main_menu li#nav_rabatter a.active:hover 	{ background: url(../img/main_menu.jpg) no-repeat -491px -90px; }
+
+#main_menu li#nav_priset a					{ width: 83px; }	
+#main_menu li#nav_priset a:hover			{ background: url(../img/main_menu.jpg) no-repeat -580px -45px; }
+#main_menu li#nav_priset a.active,
+#main_menu li#nav_priset a.active:hover 	{ background: url(../img/main_menu.jpg) no-repeat -580px -90px; }
+
+#main_menu li#nav_karriar a					{ width: 84px; }	
+#main_menu li#nav_karriar a:hover			{ background: url(../img/main_menu.jpg) no-repeat -663px -45px; }
+#main_menu li#nav_karriar a.active,
+#main_menu li#nav_karriar a.active:hover 	{ background: url(../img/main_menu.jpg) no-repeat -663px -90px; }
+
+#main_menu li#nav_f_tv a					{ width: 117px; }	
+#main_menu li#nav_f_tv a:hover				{ background: url(../img/main_menu.jpg) no-repeat -747px -45px; }
+#main_menu li#nav_f_tv a.active,
+#main_menu li#nav_f_tv a.active:hover		{ background: url(../img/main_menu.jpg) no-repeat -747px -90px; }
+
+#main_menu li#nav_sok a						{ width: 56px; }	
+#main_menu li#nav_sok a:hover				{ background: url(../img/main_menu.jpg) no-repeat -864px -45px; }
+#main_menu li#nav_sok a.active,
+#main_menu li#nav_sok a.active:hover		{ background: url(../img/main_menu.jpg) no-repeat -864px -90px; }
+	
+#menu .start 		{ background: #535353; }
+#menu .artiklar 	{ background: #601414; }
+#menu .bloggar 		{ background: #1a4e4e; }
+#menu .recept 		{ background: #1a224f; }
+#menu .kalender 	{ background: #005200; }
+#menu .bostader 	{ background: #815200; }
+#menu .rabatter 	{ background: #4c3207; }
+#menu .f_tv 		{ background: #52004a; }
+#menu .sok 			{ background: #811259; }
+
+/* sub menu */
+
+#sub_menu {
+	width: 920px;
+	height: 25px;
+	}
+
+#sub_menu li {
+	padding: 4px 10px;
+	}
+
+#menu .start a 		 { color: #e7e7e7; }
+#menu .artiklar a	 { color: #eec9c9; }
+#menu .bloggar a	 { color: #cce5e5; }
+#menu .recept a		 { color: #cccfe5; }
+#menu .kalender a	 { color: #bfe8bf; }
+#menu .bostader a	 { color: #ffe8bf; }
+#menu .rabatter a 	 { color: #e4d8c2; }
+#menu .f_tv a 		 { color: #e8bfe3; }
+#menu .sok a 		 { color: #ffc8eb; }
+
+#sub_menu li a {
+	font-size: 11px;
+	text-transform: capitalize;
+	}
+	
+#sub_menu li a:hover {
+	color: #fff;
+	}
+	
+#sub_menu li a.active, #sub_menu li a.active:hover {
+	color: #fff;
+	text-decoration: underline;
+	}	
+
+/*
+---------------------------------------------------------------------
+Content
+---------------------------------------------------------------------
+*/
+
+#content {
+	padding: 0 15px;
+	width: 930px;
+	height: auto;
+	}
+	
+#main {
+	padding: 0 5px;
+	width: 455px;
+	float: left;
+	}
+
+#sidebar {
+	padding: 0 5px;
+	width: 285px;
+	float: left;
+	}
+	
+#skyscraper {
+	padding: 5px;
+	width: 160px;
+	float: right;
+	}
+	
+#login, #tidningen {
+	padding: 10px;
+	height: 250px;
+	}
+	
+#senaste_nr {
+	width: 145px;
+	float: left;
+	}
+	
+#tidigare_nr {
+	margin: 0 0 0 10px;
+	width: auto;
+	float: right; 
+ 	}
+ 	
+#tidigare_nr .nr {
+	margin: 0 0 10px 0;
+	width: 125px;
+	float: left;
+	clear: left;
+	}
+ 	
+#tidigare_nr img {
+ 	margin: 0 10px 0 0;
+ 	float: left;
+ 	}
+ 	
+#tidigare_nr p {
+	margin: 10px 0;
+	float: left;
+	}
+
+/*
+#content #artikel,
+#content #blogg,
+#content #recept,
+*/
+.p10 {
+	padding: 10px;
+	float: left;
+	}
+
+/*	
+#content #artikel img,
+#content #blogg img,
+*/
+#content #main .p10 img {
+	margin: 10px 0;
+	}	
+	
+/*
+#content .artikel,
+#content .blogg,
+#content .recept
+*/
+.big_list {
+	padding: 10px;
+	clear: left;
+	float: left;
+	}
+
+/*	
+#content .artikel img,
+#content .blogg img,
+#content #main .recept img
+*/
+.big_list img {
+	float: left;
+	}
+
+/*
+#content .artikel div,
+#content .blogg div,
+#content #main .recept div
+*/
+.big_list div {
+	margin: 0 0 0 10px;
+	width: 290px;
+	float: left;
+	}
+
+/*
+#content .artikel div p,
+#content .blogg div p,
+#content #main .recept div p
+*/
+#content .big_list div p {
+	text-align: left;
+	}
+	
+.tavlingar_list {
+	width: 135px;
+	}
+
+/*	
+.senaste, 
+.relaterade,
+.mast,
+*/
+.list {
+	width: 265px;
+	float: left;
+	clear: both;
+	}
+	
+.list div {
+	float: left;
+	}	
+
+/*	
+.senaste img, 
+.relaterade img,
+.mast img,
+*/
+.comment .top img,
+#content #main .p10 .profil_img,
+.list img,
+.info img {
+	margin: 0 10px 10px 0;
+	float: left;
+	}
+
+/*	
+.senaste p,
+.relaterade p,
+.mast p,
+*/
+.comment .top p,
+.list p {
+	padding: 0;
+	margin: 10px 0;
+	}
+	
+.sok_recept p, .sok_bostader p {
+	margin: 0 0 10px 0;
+	width: 210px;
+	}
+
+#profil ul {
+	margin: 0 0 10px 0;
+	}
+
+#profil li {
+	padding: 0 0 4px 0;
+	}
+	
+#content #main #profil li img {
+	margin: 0 5px 0 0;
+	float: left;
+	}
+	
+#profil strong {
+	font-weight: normal;
+	display: block;
+	width: 60px;
+	float: left;
+	}
+	
+#profil span.intressen {
+	width: 225px;
+	text-align: left;
+	float: left;
+	}
+	
+#bilder,
+#filmer,
+#friends {
+	padding: 10px 0;
+	}
+	
+#bilder p,
+#filmer p,
+#friends p {
+	padding: 0px 10px;
+	}
+	
+a.pic {
+	margin: 0 9px 10px 10px;
+	padding: 2px;
+	background: #fff;
+	width: 50px;
+	height: 50px;
+	border: #d0d0d0 1px solid;
+	display: inline;
+	float: left;
+	}
+	
+a:hover.pic {
+	border: #429ED1 1px solid;
+	}
+	
+#sok {
+	padding: 5px 0 20px 5px;
+	width: 750px;
+	float:left;
+	}	
+	
+.info p {
+	width: 205px;
+	}
+	
+.info p.tags {
+	margin: 5px 0 0 0;
+	width: auto;
+	}
+	
+.sort ul {
+	margin: 0 0 10px 0;
+	}
+	
+.sort input {
+	width: 210px;
+	}
+
+.sort input.submit {
+	width: auto;
+	}
+	
+/* rating */
+
+.star_rating {
+	margin: 0px;
+	padding:0px;
+	background: url(../img/stars.gif) 0 0 repeat-x;
+	width:  90px;
+	height: 16px;
+	position: relative;
+	}
+
+.info .star_rating {
+	margin: 10px 0 0 0;
+	}
+
+.star_rating li {
+	padding:0px;
+	margin: 0px;
+	float: left;
+	}
+
+.star_rating li a {
+	display:block;
+	width:  18px;
+	height: 16px;
+	text-decoration: none;
+	text-indent: -9000px;
+	z-index: 20;
+	position: absolute;
+	padding: 0px;
+	}
+
+.star_rating li a:hover {
+	background: url(../img/stars.gif) 0 -16px;
+	z-index: 2;
+	left: 0px;
+	}
+
+.star_rating a.one_star {
+	left: 0px;
+	}
+
+.star_rating a.one_star:hover {
+	width: 18px;
+	}
+
+.star_rating a.two_stars {
+	left: 18px;
+	}
+
+.star_rating a.two_stars:hover {
+	width: 36px;
+	}
+
+.star_rating a.three_stars {
+	left: 36px;
+	}
+
+.star_rating a.three_stars:hover {
+	width: 54px;
+	}
+
+.star_rating a.four_stars {
+	left: 54px;
+	}
+
+.star_rating a.four_stars:hover {
+	width: 72px;
+	}
+
+.star_rating a.five_stars {
+	left: 72px;
+	}
+	
+.star_rating a.five_stars:hover {
+	width: 90px;
+	}
+
+.star_rating li.current_rating {
+	background: url(../img/stars.gif) 0 -32px;
+	position: absolute;
+	height: 16px;
+	width:  54px;
+	display: block;
+	text-indent: -9000px;
+	z-index: 1;
+	}
+	
+/* comments */
+
+.comment {
+	margin: 0 0 10px 0;
+	}
+
+.comment .top {
+	padding: 10px;
+	height: 50px;
+	background: url(../img/comment_top_bg.jpg) repeat-x 0 0;
+	color: #606060;
+	border: #ff0000;
+	}
+	
+.comment .top span.left {
+	width: 300px;
+	}
+	
+.comment .top span.right {
+	position: relative;
+	width: 125px;
+	}
+	
+.comment .top span.right img {
+	margin: 0 0 10px 10px;
+	float: right;
+	}
+	
+.comment .top span.right em {
+	font-size: 11px;
+	font-style: normal;
+	position: absolute;
+	top: 25px;
+	right: 0px;
+	}
+	
+.comment p {
+	padding: 10px;
+	}
+
+/* grid */
+
+.div_145, .div_285, .div_300, .div_455, .div_610, .div_750 {
+	background: #fff url(../img/box_bg.jpg) repeat-x 0 31px;
+	float: left;
+	}
+
+.div_145 {
+	margin: 5px;
+	width: 145px;
+	}
+	
+.div_285 {
+	margin: 5px 0px 10px 0px;
+	width: 285px;
+	clear: left;
+	}
+
+.div_300 {
+	margin: 5px;
+	width:  300px;
+	}
+	
+.div_455 {
+	margin: 5px;
+	width:  455px;
+	}
+	
+#main .div_455 {
+	margin: 5px 0;
+	width:  455px;
+	}	
+	
+.div_610 {
+	margin: 5px;
+	width: 610px;
+	}
+	
+.div_750 {
+	width: 750px;
+	}	
+
+#sok .div_750 {
+	margin: 0 0 10px 0;
+	}
+
+/* text */
+
+h2 {
+	margin: 0 0 5px 0;
+	font-size: 22px;
+	line-height: 22px;
+	}
+
+div.top {
+	padding: 0 10px;
+	height: 31px;
+	background: url(../img/top_bg.jpg) repeat-x 0 0;	
+	}
+
+.top h3 {
+	padding: 7px 0 6px 0;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000;
+	display: inline;
+	float: left;
+	}
+
+a.tipsa,
+a:link.tipsa,
+a:visited.tipsa {
+	padding: 4px 0 6px 0;
+	color: #606060;
+	float: right;	
+	}
+	
+a:hover.tipsa {
+	text-decoration: none;
+	}
+	
+a.tipsa img {
+	position: relative;
+	top: 2px;
+	}	
+	
+a.arrow,
+a:link.arrow,
+a:visited.arrow
+	{
+	padding: 0 0 0 12px;
+	color: #000;
+	background: url(../img/arrows.gif) no-repeat top left;
+	}
+
+a:hover.arrow {
+	color: #000;
+	text-decoration: none;
+	}
+
+#main p {
+	text-align: justify;
+	}
+
+.div_610 p {
+	padding: 10px;
+	text-align: justify;
+	}
+	
+#main #recept p {
+	padding: 10px 0;
+	text-align: left;
+	}
+	
+#main .rabatter a {
+	margin: 0 0 10px 0;
+	}
+	
+#sidebar .rabatter .box {
+	margin: 0 5px 0 0;
+	}	
+	
+#sidebar .rabatter p {
+	margin: 5px 0 0 0;
+	}
+	
+.tavlingar img {
+	margin: 10px 0;
+	}
+	
+.tavlingar p {
+	padding: 0;
+	}	
+	
+/* colors */
+
+#start h2, #start h2 a,
+#start strong, #start strong a,
+#content .start strong, #content .start strong a 
+	{
+	color: #000;
+	}
+
+#artiklar h2, #artiklar h2 a,
+#artiklar strong, #artiklar strong a,
+#content .artiklar h2, #content .artiklar h2 a,
+#content .artiklar strong, #content .artiklar strong a 
+	{
+	color: #bd2728;
+	}
+	
+#bloggar h2, #bloggar h2 a,
+#bloggar strong, #bloggar strong a,
+#content .bloggar h2, #content .bloggar h2 a,
+#content .bloggar strong, #content .bloggar strong a 
+	{
+	color: #339a99;
+	}
+	
+#recept h2, #recept h2 a,
+#recept strong, #recept strong a,
+#content .recept h2, #content .recept h2 a,
+#content .recept strong, #content .recept strong a 
+	{
+	color: #334199;
+	}
+
+#kalender h2, #kalender h2 a,
+#kalender strong, #kalender strong a,
+#content .kalender h2, #content .kalender h2 a,
+#content .kalender strong, #content .kalender strong a 
+	{
+	color: #00a200;
+	}
+	
+#bostader h2, #bostader h2 a,
+#bostader strong, #bostader strong a,
+#content .bostader h2, #content .bostader h2 a,
+#content .bostader strong, #content .bostader strong a 
+	{
+	color: #ffa200;
+	}
+	
+#rabatter h2, #rabatter h2 a,
+#rabatter strong, #rabatter strong a,
+#content .rabatter h2, #content .rabatter h2 a,
+#content .rabatter strong, #content .rabatter strong a 
+	{
+	color: #94620d;
+	}		
+	
+#f_tv h2, #f_tv h2 a,
+#f_tv strong, #f_tv strong a,
+#content .f_tv h2, #content .f_tv h2 a,
+#content .f_tv strong, #content .f_tv strong a 
+	{
+	color: #a20091;
+	}
+	
+#sok h2, #sok h2 a,
+#sok strong, #sok strong a,
+#content .sok h2, #content .sok h2 a,
+#content .sok strong, #content .sok strong a 
+	{
+	color: #ff23af;
+	}
+	
+h4 {
+	font-size: 13px;
+	color: #000;
+	}
+	
+p.school {
+	margin: 0 0 10px 0;
+	color: #808080;
+	font-size: 11px;
+	}
+	
+b 	{
+	color: #000;
+	}
+
+/*
+---------------------------------------------------------------------
+Form
+---------------------------------------------------------------------
+*/
+
+form p {
+	margin: 0 0 10px 0;
+	}
+
+input, textarea, select {
+	margin:  3px 0 0 0;
+	padding: 5px;
+	font: 12px/1.4em arial, helvetica, sans-serfi;
+	border: #c0c0c0 1px solid;
+	}
+	
+input.submit, #login input.submit {
+	padding: 5px 7px;
+	background: url(../img/submit_bg.jpg) repeat-x 0 0;
+	font-size: 11px;
+	cursor: pointer;
+	width: auto;
+	}
+
+#login input {
+	width: 268px;
+	}
+	
+#write_comment textarea {
+	width: 423px;
+	}
+	
+.sok_recept select, .sok_bostader select {
+	width: 210px;
+	}
+
+form.sok {
+	margin: 0 0 50px 0;
+	padding: 15px;
+	background: url(../img/form_sok_bg.jpg) no-repeat 0 0;
+	width: 700px;
+	height: 47px;
+	float: left;
+	}
+	
+form.sok p {
+	margin: 0;
+	}
+	
+form.sok input {
+	margin: 0;
+	padding: 10px 15px;
+	width: 585px;
+	height: 24px;
+	background: url(../img/input_sok_bg.jpg) repeat-x 0 0;
+	font-size: 22px;
+	font-weight: normal;
+	line-height: 22px;
+	border-color: #d0d0d0;
+	float: left;
+	}	
+
+form.sok input.sok_submit {
+	margin: 0;
+	padding: 10px 0px;
+	width: 70px;
+	height: 46px;
+	background: url(../img/input_sok_submit_bg.jpg) repeat-x 0 0;
+	color: #808080;
+	text-align: center;
+	cursor: pointer;
+	float: right;
+	}
+
+/*
+---------------------------------------------------------------------
+Footer
+---------------------------------------------------------------------
+*/
+
+#footer {
+	clear: both;
+	}

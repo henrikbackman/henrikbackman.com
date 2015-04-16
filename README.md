@@ -1,2 +1,2 @@
 # henrikbackman.com
-Personal portfolio
+Personal portfolio of GUI developer Henrik Backman
