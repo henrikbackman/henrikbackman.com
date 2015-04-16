@@ -3,7 +3,7 @@
 /* ----- Base ----- */
 
 html {
-  font-size: 100%;
+  font: 300 100%/1 'Oswald', sans-serif;
   overflow-y: scroll;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -36,24 +36,22 @@ a:hover {
 
 h1 {
   font-size: 3.8em;
+  font-weight: 700;
   margin: 0.67em 0 0.2em;
 }
 
 h2 {
   font-size: 1.8em;
+  font-weight: 400;
   margin: 0.83em 0 0.4em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  display: block;
-  font-family: sans-serif;
-  font-weight: normal;
   line-height: 1;
 }
 
 h1, h2 {
   color: #fff;
-  font-family: 'Oswald', sans-serif;
   letter-spacing: 1px;
   text-shadow: 0 2px 1px #666;
   text-transform: uppercase;
@@ -115,15 +113,6 @@ body {
   letter-spacing: .3px;
   line-height: 1.5em;
 }
-
-
-/* ----- @font-face ----- */
-
-/*@font-face {
-  font-family: 'AachenStdBold';
-  src: url('font/aachenstdbold.eot');
-  src: local('Aachen Std'), local('AachenStd-Bold'), url('font/aachenstdbold.woff') format('woff'), url('font/aachenstdbold.otf') format('opentype'), url('font/aachenstdbold.svg#AachenStd-Bold') format('svg');
-}*/
 
 
 /* ----- Content ----- */
