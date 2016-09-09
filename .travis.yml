@@ -1,0 +1,9 @@
+git:
+  depth: 1
+
+sudo: false
+
+branches:
+  only:
+    - master
+    - gh-pages
