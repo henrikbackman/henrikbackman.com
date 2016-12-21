@@ -7,6 +7,7 @@
     "node": "6.5.0"
   },
   "scripts": {
+    "postinstall": "gulp build && gulp prune",
     "start": "node ./bin/www",
     "test": "npm test"
   },
