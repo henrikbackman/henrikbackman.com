@@ -3,3 +3,7 @@
 
 # Ignore installed node modules
 /node_modules
+
+# Others
+npm-debug.log*
+/public
