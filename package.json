@@ -9,7 +9,7 @@
   "scripts": {
     "postinstall": "gulp build",
     "start": "node ./bin/www",
-    "test": "npm test"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
