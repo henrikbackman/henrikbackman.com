@@ -1,9 +1,34 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/assets/app.css')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    title= data.site_title
+    meta(name='description', content='#{data.meta.description}')
+    meta(name='keywords', content='#{data.meta.keywords}')
+
+    meta(property='og:site_name', content='#{data.meta.og.site_name}')
+    meta(property='og:title', content='#{data.meta.og.title}')
+    meta(property='og:description', content='#{data.meta.og.description}')
+    meta(property='og:image', content='#{data.meta.og.image}')
+    meta(property='og:type', content='website')
+    meta(property='og:url', content='#{data.meta.og.url}')
+
+    link(rel='author', href='https://plus.google.com/+HenrikBackman')
+    link(rel='publisher', href='https://plus.google.com/+HenrikBackman')
+    link(rel='shortcut icon', type='image/x-icon', href='favicon.ico?v=#{data.meta.updated}')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Oswald:400,700,300')
+    link(rel='stylesheet', href='#{data.assetPath}app.css')
+    link(rel='apple-touch-icon-precomposed', href='henrikbackman.png?v=#{data.meta.updated}')
+    meta(name='apple-mobile-web-app-title', content='henrikbackman')
   body
-    block content
-  script(src='/assets/app.js')
+    #{data.meta.og.image}
+    .wrap.clearfix
+      header.header
+        h1= data.title
+        p= data.subtitle
+      block content
+  script(src='#{data.assetPath}app.js')
 
