@@ -22,21 +22,23 @@
   },
   "homepage": "https://github.com/henrikbackman/henrikbackman.com#readme",
   "dependencies": {
-    "body-parser": "~1.15.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.5.1",
-    "express": "~4.14.0",
-    "jade": "~1.11.0",
-    "morgan": "~1.7.0",
-    "node-sass": "^4.1.0",
-    "serve-favicon": "~2.3.0"
+    "async": "2.1.4",
+    "body-parser": "1.15.2",
+    "cookie-parser": "1.4.3",
+    "debug": "2.5.1",
+    "express": "4.14.0",
+    "jade": "1.11.0",
+    "morgan": "1.7.0",
+    "node-sass": "4.1.0",
+    "serve-favicon": "2.3.0"
   },
   "devDependencies": {
-    "depcheck": "^0.6.7",
-    "gulp": "^3.9.1",
-    "gulp-check-deps": "^1.4.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-sass": "^3.0.0",
-    "run-sequence": "^1.2.2"
+    "depcheck": "0.6.7",
+    "gulp": "3.9.1",
+    "gulp-check-deps": "1.4.1",
+    "gulp-concat": "2.6.1",
+    "gulp-sass": "3.0.0",
+    "gulp-util": "3.0.8",
+    "run-sequence": "1.2.2"
   }
 }
