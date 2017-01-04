@@ -1,5 +1,5 @@
 doctype html
-html
+html(lang='en')
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
@@ -19,9 +19,9 @@ html
     link(rel='author', href='#{data.meta.gplus}')
     link(rel='publisher', href='#{data.meta.gplus}')
     link(rel='shortcut icon', type='image/x-icon', href='favicon.ico?v=#{data.meta.updated}')
-    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Oswald:400,700,300')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700')
     link(rel='stylesheet', href='#{data.assetPath}app.css')
-    link(rel='apple-touch-icon-precomposed', href='henrikbackman.png?v=#{data.meta.updated}')
+    link(rel='apple-touch-icon-precomposed', href='#{data.meta.touch_icon}?v=#{data.meta.updated}')
     meta(name='apple-mobile-web-app-title', content='henrikbackman')
   body
     .wrap.clearfix

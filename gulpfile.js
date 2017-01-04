@@ -1,3 +1,5 @@
+'use strict';
+
 const gulp = require('gulp'),
       gutil = require('gulp-util'),
       sass = require('gulp-sass'),
@@ -7,51 +9,26 @@ const gulp = require('gulp'),
       path = require('path'),
       childProcess = require('child_process'),
       fork = require('child_process').fork,
+      spawn = require('child_process').spawn,
       runSequence = require('run-sequence'),
       async = require('async'),
       config = require('./app/config')();
-
-const app = {
-  instance: null,
-  path: 'app.js',
-  env: process.env,
-  start: function(callback) {
-    app.instance = fork(app.path, {
-      silent: true, env: app.env
-    });
-
-    if (app.instance) {
-      childProcess.exec('npm start');
-      gutil.log(gutil.colors.cyan('Starting'), 'express server listening on port', config.port);
-      // app.instance.stdout.pipe(process.stdout);
-      // app.instance.stderr.pipe(process.stderr);
-    }
-    callback();
-  },
-  stop: function(callback) {
-    if (app.instance) {
-      gutil.log(gutil.colors.red('Stopping'), 'express server ( PID:', app.instance.pid, ')');
-      app.instance.kill('SIGTERM');
-    }
-    callback();
-  },
-  restart: function() {
-    async.series([
-      app.stop,
-      app.start
-    ]);
-  },
-};
 
 const assets = {
   sass: 'app/assets/sass/app.scss',
   scripts: {
     app: 'app/assets/js/**/*.{js,jsx}',
-    vendor: '',
+    vendor: 'node_modules/jquery/dist/jquery.min.js',
   },
   images: 'app/assets/img/**/*',
-  jade: 'app/views/**/*.jade',
-  node: 'routes/**/*',
+  environment: [
+    'routes/**/*',
+    'app/config.js',
+  ],
+  statics: [
+    './favicon.ico',
+    './henrikbackman.png',
+  ],
 };
 
 // Clean the /public directory
@@ -138,13 +115,18 @@ gulp.task('images', function() {
     .pipe(gulp.dest('public/assets/img'));
 });
 
+// Copy statics
+gulp.task('statics', function() {
+  return gulp.src(assets.statics)
+    .pipe(gulp.dest('public'));
+});
+
 // Watch for changes
 gulp.task('watch', function () {
   gulp.watch(assets.images, ['images']);
   gulp.watch(assets.sass, ['sass']);
   gulp.watch(assets.scripts.vendor, ['scripts']);
   gulp.watch(assets.scripts.app, ['scripts']);
-  gulp.watch(assets.node, app.restart);
 });
 
 gulp.task('build', function(callback) {
@@ -154,14 +136,14 @@ gulp.task('build', function(callback) {
       'sass',
       'scripts',
       'images',
+      'statics',
     ],
     callback);
 });
 
-gulp.task('start-service', app.start);
-
-gulp.task('exit', function () {
-  childProcess.exec('^C');
+gulp.task('start-service', function() {
+  childProcess.exec('npm start');
+  gutil.log(gutil.colors.green('Starting server on port', config.port));
 });
 
 gulp.task('start', function(callback) {

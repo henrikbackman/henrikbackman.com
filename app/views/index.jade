@@ -11,19 +11,39 @@ block content
           else
             img(src='#{data.imagePath}#{project.image}?v=#{project.added}', alt='#{project.title}')
           figcaption
-            h2 #{project.title}
-            p #{project.description}
-              a(href='#{project.company.url}', rel='nofollow', target='_blank') #{project.company.name}
+            h2
+              if project.url
+                a(href='#{project.url}', rel='nofollow', target='_blank') #{project.title}
+              else
+                =project.title
+            button.toggle-info
+            .info
+              if project.description
+                h3 #{project.description}
+              p 
+                strong Company: 
+                a(href='#{project.company.url}', rel='nofollow', target='_blank') #{project.company.name}
               if project.year
-                , (#{project.year})
+                p
+                  strong Year: 
+                  =project.year
+              if project.techniques
+                ul
+                  li
+                    strong Techniques: 
+                  - each technique in project.techniques
+                    li #{technique}
+        if project.responsive
+          span.responsive-icon
     li.contact
-      h2 Contact me
+      h2 Contact
       div(itemscope='', itemtype='http://schema.org/Person')
         meta(itemprop='name', content='#{data.title}')
-        meta(itemprop='image', content='/henrikbackman.png')
+        meta(itemprop='image', content='#{data.meta.touch_icon}')
         meta(itemprop='jobtitle', content='GUI developer')
         ul
-          li(itemprop='telephone') #{data.about.phone}
+          li(itemprop='telephone')
+            a(href='tel:#{data.about.phone.compressed}') #{data.about.phone.formatted}
           li
             a(href='mailto:#{data.about.email}')
               span(itemprop='email') #{data.about.email}

@@ -1,4 +1,23 @@
-console.log('Working!');
+'use strict';
 
-// Creating app... done, ⬢ radiant-dawn-52893
-// https://radiant-dawn-52893.herokuapp.com/ | https://git.heroku.com/radiant-dawn-52893.git
+var HB = HB || {};
+
+HB.main = function() {
+  var toggleInfo = function() {
+    var btn = $('.toggle-info');
+
+    btn.on('click', function(e) {
+      $(e.target).toggleClass('visible');
+    });
+  };
+
+  return {
+    init: function() {
+
+      toggleInfo();
+
+    }
+  };
+}();
+
+$(document).ready(HB.main.init);
