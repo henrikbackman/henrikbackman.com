@@ -7,13 +7,12 @@
 var app = require('../app');
 var debug = require('debug')('henrikbackman.com:server');
 var http = require('http');
-var portNr = process.env.PORT || '3000';
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(portNr);
+var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
@@ -26,7 +25,7 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(portNr);
+server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
