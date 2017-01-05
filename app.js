@@ -3,7 +3,8 @@ const express = require('express'),
       favicon = require('serve-favicon'),
       logger = require('morgan'),
       cookieParser = require('cookie-parser'),
-      bodyParser = require('body-parser');
+      bodyParser = require('body-parser'),
+      newrelic = require('newrelic');
 
 var index = require('./routes/index');
 
