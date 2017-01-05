@@ -25,7 +25,7 @@ module.exports = function() {
         'url': baseUrl,
       },
       'gplus': 'https://plus.google.com/+HenrikBackman',
-      'updated': '150417',
+      'updated': '170105',
       'touch_icon': touchIcon,
     },
     'about': {
@@ -96,6 +96,29 @@ module.exports = function() {
           'Typeahead',
           'Gulp',
           'Git',
+        ],
+        'awards': [
+          {
+            'title': 'Swedish food site of the year',
+            'category': 'Food websites',
+            'year': '2016',
+            'url': 'http://internetworld.idg.se/2.1006/1.653277/topp-100-matsajter',
+            'placement': 'gold',
+          },
+          {
+            'title': 'Swedish digital design award',
+            'category': 'Editorial - Digital',
+            'year': '2016',
+            'url': 'http://www.designpriset.se/vinnare.php?year=2016#post-102363',
+            'placement': 'silver',
+          },
+          {
+            'title': 'Swedish publisher prize',
+            'category': 'Information websites',
+            'year': '2016',
+            'url': 'http://publishingpriset.org/vinnare-2016/',
+            'placement': 'gold',
+          },
         ],
       },
       {
@@ -223,7 +246,7 @@ module.exports = function() {
         'title': 'Zuperbox',
         'url': 'http://www.zuperbox.se',
         'image': 'zuperbox.jpg',
-        'description': 'At ',
+        'description': 'Ecommerce site',
         'company': {
           'name': '203 Creative',
           'url': 'http://www.203creative.se',

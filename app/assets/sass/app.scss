@@ -5,8 +5,14 @@ $font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sa
 $font-face-stack: 'Open Sans Condensed', sans-serif;
 $font-color: #333;
 $font-color-light: #666;
+$icon-color: #999;
 $toggle-width: 30px;
 $item-radius: 2px;
+$gold: #d9a441;
+$silver: #a8a8a8;
+$bronze: #965a38;
+$blue: #069;
+$yellow: #fc0;
 
 /* ----- Base ----- */
 
@@ -28,8 +34,8 @@ body {
   margin: 0;
 }
 
-::-moz-selection	{ background: #999; color: #fff; text-shadow: none; }
-::selection				{ background: #999; color: #fff; text-shadow: none; }
+::-moz-selection  { background: $icon-color; color: #fff; text-shadow: none; }
+::selection       { background: $icon-color; color: #fff; text-shadow: none; }
 
 
 /* ----- Links ----- */
@@ -71,7 +77,7 @@ h2 {
   padding-right: $toggle-width - 3;
 }
 
-h3, strong {
+h3, h4, strong {
   color: $font-color;
   font-weight: 400;
 }
@@ -79,6 +85,10 @@ h3, strong {
 h3 {
   font-size: 1em;
   margin: 0 0 8px;
+}
+
+h4 {
+  margin: 0;
 }
 
 p { margin: 1em 0; }
@@ -93,7 +103,7 @@ img {
 
 figure { margin: 0; }
 
-del { color: #999; }
+del { color: $icon-color; }
 
 
 /* ----- Content ----- */
@@ -124,6 +134,7 @@ del { color: #999; }
   list-style: none;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
   .item,
@@ -189,11 +200,12 @@ del { color: #999; }
 
   &:before,
   &:after {
-    background: #999;
+    background: $icon-color;
     content: "";
     height: 2px;
     margin-left: 6px;
     position: absolute;
+    transition: transform .2s ease-in-out;
     top: 8px;
     width: 10px;
   }
@@ -210,26 +222,31 @@ del { color: #999; }
 
   &.visible {
     &:before {
-      left: 6px;
+      transform: rotate(-45deg);
     }
 
     &:after {
-      left: 0;
+      transform: rotate(45deg);
     }
 
-    & + .info {
-      display: block;
+    & + .info-wrapper {
+      max-height: 600px;
     }
   }
 }
 
+.info-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease-in-out;
+}
+
 .info {
   border-top: 1px solid #f5f5f5;
-  display: none;
   margin: 20px -15px 0;
   padding: 20px 15px 0;
 
-  ul {
+  ul.techniques {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -251,20 +268,145 @@ del { color: #999; }
   }
 }
 
-.responsive-icon {
-  background-color: #ff5252;
-  border-radius: 0 $item-radius 0 $item-radius;
-  color: #fff;
-  display: none;
-  font-size: .8em;
-  padding: 2px 5px;
+.awards-wrapper {
+  margin-top: 10px;
+
+  h3 {
+    margin-bottom: 5px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 5px;
+    padding-left: 17px;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+    }
+
+    &:before {
+      background: linear-gradient(to right, $blue 0%, $blue 49%, $yellow 51%, $yellow 100%);
+      box-shadow: 0 0 1px rgba(0, 0, 0, .4);
+      height: 6px;
+      left: 3px;
+      top: 7px;
+      width: 6px;
+    }
+
+    &:after {
+      border-radius: 50%;
+      box-shadow: 0 -1px 1px rgba(0, 0, 0, .2);
+      height: 10px;
+      left: 1px;
+      top: 12px;
+      width: 10px;
+    }
+
+    &.gold:after {
+      background: linear-gradient(to bottom, lighten($gold, 10%) 0%, darken($gold, 1%) 100%);
+    }
+
+    &.silver:after {
+      background: linear-gradient(to bottom, lighten($silver, 10%) 0%, darken($silver, 1%) 100%);
+    }
+
+    &.bronze:after {
+      background: linear-gradient(to bottom, lighten($bronze, 10%) 0%, darken($bronze, 1%) 100%);
+    }
+  }
+}
+
+.toggle-button {
+  background: $bg-color;
+  border: 0;
+  border-radius: 19px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .1), 0 0 0 1px darken($bg-color, 4%);
+  color: $icon-color;
+  cursor: pointer;
+  font-size: 0.9231em;
+  height: 37px;
+  line-height: 37px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 25px 0 12px;
   position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
+  right: 2%;
+  top: -48px;
+  z-index: 2;
+
+  &:before,
+  &:after {
+    background: $icon-color;
+    content: "";
+    height: 2px;
+    position: absolute;
+    right: 13px;
+    transition: transform .5s ease-in-out, right .5s ease-in-out, opacity .2s ease-in-out;
+    top: 17px;
+    width: 10px;
+  }
+
+  &:before {
+    transform: rotate(0);
+  }
 
   &:after {
-    content: "Responsive";
+    transform: rotate(90deg);
+  }
+
+  span {
+    display: block;
+    max-width: 0;
+    overflow: hidden;
+    transition: max-width .2s ease-in-out;
+  }
+
+  &:hover {
+    &:before,
+    &:after {
+      right: 10px;
+    }
+
+    &:before {
+      transform: rotate(360deg);
+    }
+
+    &:after {
+      transform: rotate(450deg);
+    }
+
+    span {
+      max-width: 100px;
+    }
+  }
+
+  &.expanded {
+    &:before {
+      transform: rotate(360deg);
+    }
+
+    &:after {
+      opacity: 0;
+      transform: rotate(450deg);
+    }
+
+    &:hover {
+      &:before {
+        transform: rotate(0deg);
+      }
+
+      &:after {
+        transform: rotate(90deg);
+      }
+    }
   }
 }
 
@@ -282,6 +424,10 @@ del { color: #999; }
   }
 
   .item { width: 46%; }
+
+  .toggle-button {
+    top: -53px;
+  }
 
 }
 
