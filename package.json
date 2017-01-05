@@ -36,6 +36,7 @@
     "jade": "1.11.0",
     "jquery": "3.1.1",
     "morgan": "1.7.0",
+    "newrelic": "^1.36.0",
     "node-sass": "4.1.1",
     "run-sequence": "1.2.2",
     "serve-favicon": "2.3.2"
