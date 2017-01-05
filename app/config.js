@@ -25,7 +25,7 @@ module.exports = function() {
         'url': baseUrl,
       },
       'gplus': 'https://plus.google.com/+HenrikBackman',
-      'updated': '170105',
+      'updated': '170106',
       'touch_icon': touchIcon,
     },
     'about': {
