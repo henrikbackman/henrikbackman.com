@@ -61,6 +61,7 @@ gulp.task('depcheck', function() {
     "ignoreMatches": [
       'debug',
       'jade',
+      'jquery',
       'node-sass',
     ]
   };
