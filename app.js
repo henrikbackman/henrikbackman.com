@@ -1,10 +1,10 @@
-const express = require('express'),
+const newrelic = require('newrelic'),
+      express = require('express'),
       path = require('path'),
       favicon = require('serve-favicon'),
       logger = require('morgan'),
       cookieParser = require('cookie-parser'),
-      bodyParser = require('body-parser'),
-      newrelic = require('newrelic');
+      bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 
