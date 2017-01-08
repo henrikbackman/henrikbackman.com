@@ -1,0 +1,132 @@
+$font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-face-stack: 'Open Sans Condensed', sans-serif;
+$toggle-width: 30px;
+$item-radius: 2px;
+
+$base-font-size: 16;
+$base-line-height: 22px;
+
+// Maybe use this instead: https://css-tricks.com/snippets/sass/mixin-manage-breakpoints/
+@mixin media($breakpoint) {
+  @if $breakpoint == 'm' {
+    @media (min-width: 610px) {
+      // Tablet
+      @content;
+    }
+  }
+
+  @else if $breakpoint == 'l' {
+    @media (min-width: 940px) {
+      // Desktop
+      @content;
+    }
+  }
+
+  @else if $breakpoint == 'xl' {
+    @media (min-width: 1320px) {
+      // Very large screen
+      @content;
+    }
+  }
+
+  @else {
+    @media (min-width: $breakpoint) {
+      // Custom
+      @content;
+    }
+  }
+}
+
+// Font-size & line-height
+@mixin font-size($font-size, $line-height: 'no-line-height') {
+  font-size: $font-size + px;
+  font-size: ($font-size / $base-font-size) * 1rem;
+  @if $line-height != 'no-line-height' {
+    line-height: $line-height;
+  }
+}
+
+// Prefix
+@mixin prefix($property, $value) {
+  -webkit-#{$property}: $value;
+     -moz-#{$property}: $value;
+      -ms-#{$property}: $value;
+       -o-#{$property}: $value;
+          #{$property}: $value;
+}
+
+// Transform
+@mixin transform($transform-type, $transform-amount) {
+  -webkit-transform: $transform-type+unquote('(#{$transform-amount})');
+     -moz-transform: $transform-type+unquote('(#{$transform-amount})');
+      -ms-transform: $transform-type+unquote('(#{$transform-amount})');
+       -o-transform: $transform-type+unquote('(#{$transform-amount})');
+          transform: $transform-type+unquote('(#{$transform-amount})');
+}
+
+// Transform transition
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  transition:         $transition;
+}
+
+@mixin transition-property($property...) {
+  -webkit-transition-property: $property;
+  -moz-transition-property:    $property;
+  -o-transition-property:      $property;
+  transition-property:         $property;
+}
+
+@mixin transition-duration($duration...) {
+  -webkit-transition-property: $duration;
+  -moz-transition-property:    $duration;
+  -o-transition-property:      $duration;
+  transition-property:         $duration;
+}
+
+@mixin transition-timing-function($timing...) {
+  -webkit-transition-timing-function: $timing;
+  -moz-transition-timing-function:    $timing;
+  -o-transition-timing-function:      $timing;
+  transition-timing-function:         $timing;
+}
+
+@mixin transition-delay($delay...) {
+  -webkit-transition-delay: $delay;
+  -moz-transition-delay:    $delay;
+  -o-transition-delay:      $delay;
+  transition-delay:         $delay;
+}
+
+// Linear gradient
+@mixin gradient($top, $bottom, $fallback: $bottom) {
+  background: $fallback;
+  background: -moz-linear-gradient(top, $top 0%, $bottom 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
+  background: -webkit-linear-gradient(top, $top 0%, $bottom 100%);
+  background: -o-linear-gradient(top, $top 0%, $bottom 100%);
+  background: -ms-linear-gradient(top, $top 0%, $bottom 100%);
+  background: linear-gradient(to bottom, $top 0%, $bottom 100%); /* W3C */
+}
+
+// No list styling
+@mixin no-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Clearfix
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}

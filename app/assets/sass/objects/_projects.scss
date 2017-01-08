@@ -1,0 +1,70 @@
+.projects {
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+  .item,
+  .contact {
+    display: inline-block;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    margin: 0 2% 30px;
+  }
+
+  .item {
+    background: #fff;
+    border-radius: $item-radius;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .2);
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    width: 96%;
+
+    @include media(m) {
+      width: 46%;
+    }
+
+    @include media(l) {
+      width: 29.33333%;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .info {
+      &, a {
+        color: $font-color-light;
+      }
+    }
+
+    img {
+      box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+    }
+
+    figcaption {
+      padding: 20px 15px;
+    }
+  }
+
+  .contact {
+    width: 96%;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+@include media(l) {
+  body,
+  .item,
+  .contact {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}

@@ -15,7 +15,10 @@ const gulp = require('gulp'),
       config = require('./app/config')();
 
 const assets = {
-  sass: 'app/assets/sass/app.scss',
+  sass: {
+    all: 'app/assets/sass/**/*.scss',
+    init: 'app/assets/sass/app.scss',
+  },
   scripts: {
     app: 'app/assets/js/**/*.{js,jsx}',
     vendor: 'node_modules/jquery/dist/jquery.min.js',
@@ -93,7 +96,7 @@ gulp.task('outdated', function() {
 
 // Get scss files and create a CSS file
 gulp.task('sass', function () {
-  gulp.src(assets.sass)
+  gulp.src(assets.sass.init)
     .pipe(sass({
       outputStyle: 'compressed',
     }).on('error', sass.logError))
@@ -125,7 +128,7 @@ gulp.task('statics', function() {
 // Watch for changes
 gulp.task('watch', function () {
   gulp.watch(assets.images, ['images']);
-  gulp.watch(assets.sass, ['sass']);
+  gulp.watch(assets.sass.all, ['sass']);
   gulp.watch(assets.scripts.vendor, ['scripts']);
   gulp.watch(assets.scripts.app, ['scripts']);
 });

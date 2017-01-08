@@ -1,0 +1,55 @@
+.awards-wrapper {
+  margin-top: 10px;
+
+  h3 {
+    margin-bottom: 5px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 5px;
+    padding-left: 1.7em;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+    }
+
+    &:before {
+      background: linear-gradient(to right, $blue 0%, $blue 49%, $yellow 51%, $yellow 100%);
+      box-shadow: 0 0 1px rgba(0, 0, 0, .4);
+      height: 6px;
+      left: 3px;
+      top: 7px;
+      width: 6px;
+    }
+
+    &:after {
+      border-radius: 50%;
+      box-shadow: 0 -1px 1px rgba(0, 0, 0, .2);
+      height: 10px;
+      left: 1px;
+      top: 12px;
+      width: 10px;
+    }
+
+    &.gold:after {
+      background: linear-gradient(to bottom, lighten($gold, 10%) 0%, darken($gold, 1%) 100%);
+    }
+
+    &.silver:after {
+      background: linear-gradient(to bottom, lighten($silver, 10%) 0%, darken($silver, 1%) 100%);
+    }
+
+    &.bronze:after {
+      background: linear-gradient(to bottom, lighten($bronze, 10%) 0%, darken($bronze, 1%) 100%);
+    }
+  }
+}
