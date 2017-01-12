@@ -1,3 +1,7 @@
+$contact-image-small-size: 75px;
+$contact-image-medium-size: 110px;
+$contact-image-big-size: 140px;
+
 .projects {
   font-size: 0;
   list-style: none;
@@ -9,8 +13,7 @@
   .item,
   .contact {
     display: inline-block;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    @include font-size(13);
     margin: 0 2% 30px;
   }
 
@@ -51,7 +54,42 @@
   }
 
   .contact {
+    box-sizing: border-box;
+    padding-left: $contact-image-small-size + 15;
+    position: relative;
     width: 96%;
+
+    @include media(m) {
+      padding-left: $contact-image-medium-size + 30;
+    }
+
+    @include media(l) {
+      padding-left: $contact-image-big-size + 30;
+    }
+
+    &:before {
+      background: url(#{$asset-path}henrik-backman.jpg) 50% 50% no-repeat;
+      background-size: contain;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+      border-radius: 50%;
+      content: "";
+      display: block;
+      height: $contact-image-small-size;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: $contact-image-small-size;
+
+      @include media(m) {
+        height: $contact-image-medium-size;
+        width: $contact-image-medium-size;
+      }
+
+      @include media(l) {
+        height: $contact-image-big-size;
+        width: $contact-image-big-size;
+      }
+    }
 
     ul {
       list-style: none;
@@ -64,7 +102,6 @@
   body,
   .item,
   .contact {
-    font-size: 14px;
-    font-size: 0.875rem;
+    @include font-size(14);
   }
 }

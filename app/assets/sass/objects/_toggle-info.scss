@@ -89,7 +89,7 @@
   box-shadow: 2px 2px 2px rgba(0, 0, 0, .1), 0 0 0 1px darken($bg-color, 4%);
   color: $icon-color;
   cursor: pointer;
-  font-size: 0.9231em;
+  @include font-size(13);
   height: 37px;
   line-height: 37px;
   outline: 0;

@@ -4,6 +4,7 @@ const gulp = require('gulp'),
       gutil = require('gulp-util'),
       sass = require('gulp-sass'),
       concat = require('gulp-concat'),
+      autoprefixer = require('gulp-autoprefixer'),
       depcheck = require('depcheck'),
       checkDeps = require('gulp-check-deps'),
       path = require('path'),
@@ -100,6 +101,14 @@ gulp.task('sass', function () {
     .pipe(sass({
       outputStyle: 'compressed',
     }).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: [
+        'last 4 versions',
+        'ie >= 9',
+        'iOS >= 8',
+      ],
+      cascade: false,
+    }))
     .pipe(gulp.dest('public/assets'));
 });
 
