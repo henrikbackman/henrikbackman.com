@@ -5,6 +5,7 @@ const gulp = require('gulp'),
       sass = require('gulp-sass'),
       concat = require('gulp-concat'),
       autoprefixer = require('gulp-autoprefixer'),
+      uglify = require('gulp-uglify'),
       depcheck = require('depcheck'),
       checkDeps = require('gulp-check-deps'),
       path = require('path'),
@@ -119,6 +120,7 @@ gulp.task('scripts', function() {
       assets.scripts.app,
     ])
     .pipe(concat('app.js'))
+    .pipe(uglify())
     .pipe(gulp.dest('public/assets'));
 });
 
