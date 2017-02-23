@@ -19,7 +19,16 @@ deploy:
     secure: P5PHzytytgtOWe3M/52TEfgLEOOLplK4uSGgHsoTSt4YMYB+HvnKz1cZin2CyYOdU7BRWb3wZozHOcSBfRBGmqXZK+VMl5OTp2HWDH4YCO/elGLSDfdPi0w6UU1k36wxKT8qq+4xxa7ULniDDo1bd0gttcu4tyWKMp3SzCb+Q2ye2gTTNoU4LFEGCLmkzRbY3DGq/yhSojTdwooQB4m6UhLbD69C1sZ9MrOks31ITENIAh5mJgY0tdeNyi/6ds5hALCCcFbGqBkQyYiTqFskZkNLbJ0WU2o46FS3lmhiyU2qgHlkGljW7+6ULU1yuqTCTi+QaKBRf3S0GGWSMJQt4Z1lxZ0mVJ/ydm69LCE/hMbD59SCuF5QUgRQIKMeSZJACv8twYS5EhS9JSc/pQFxhByaWhgTxrZJXitM2HppPM45+kCyHr7fH9h/Cx0Wx7re3T2/thT4brEfbSizB6g7afgyjFuzEWkGdVCqe2IFkF5/hDHnWZOcmJW4XIeHEP8LEUtoTyfS13OeoZQIe8mEnXunXFshEtHcDwQR5GMWqiUXhQM+N1D1MNb7NClH7dGXCwWvdlJZ6O8m9GIq0UnTZt4dJje4DDbjDe9T63nacaEZx4WuCFlvQyYGlWVRIlyfNFxbEsbe6B24xqq70p9jL+hU8OjK1sxKKLkX0OHQaiU=
   app:
     master: henrikbackman
+  run:
+    - 'npm install'
+    - 'npm start'
 
 before_install:
   - 'npm cache clean'
+
+install:
   - 'npm install -g gulp'
+  - 'npm install'
+
+script:
+  - 'npm start'
