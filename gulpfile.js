@@ -47,10 +47,10 @@ gulp.task('clean', function(callback) {
 gulp.task('test', function(callback) {
   runSequence(
     'build',
-    [
-      'depcheck',
-      'outdated',
-    ],
+    // [
+    //   'depcheck',
+    //   'outdated',
+    // ],
     callback);
 });
 
