@@ -21,7 +21,6 @@ deploy:
     master: henrikbackman
   run:
     - 'npm install'
-    - 'npm start'
 
 before_install:
   - 'npm cache clean'
