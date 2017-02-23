@@ -25,10 +25,4 @@ deploy:
 
 before_install:
   - 'npm cache clean'
-
-install:
   - 'npm install -g gulp'
-  - 'npm install'
-
-script:
-  - 'npm start'
