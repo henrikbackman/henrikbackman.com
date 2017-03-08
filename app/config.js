@@ -2,7 +2,7 @@
 
 const baseUrl = 'http://www.henrikbackman.com',
       author = 'Henrik Backman',
-      jobTitle = 'GUI developer',
+      jobTitle = 'Front-end developer',
       assetPath = '/assets/',
       touchIcon = '/henrikbackman.png';
 
@@ -15,12 +15,12 @@ module.exports = function() {
     'assetPath': assetPath,
     'imagePath': assetPath + 'img/',
     'meta': {
-      'description': 'Portfolio of ' + jobTitle + ' ' + author + ', former Hyper Island student',
-      'keywords': 'CSS, HTML, Javascript, Hyper Island, GUI developer, Front-end developer',
+      'description': 'Portfolio of ' + jobTitle.toLowerCase() + ' ' + author + ', former Hyper Island student',
+      'keywords': 'CSS, HTML, Javascript, Hyper Island, GUI developer, ' + jobTitle,
       'og': {
         'site_name': 'henrikbackman.com',
         'title': 'Portfolio of ' + author,
-        'description': 'Portfolio of ' + jobTitle + ' ' + author,
+        'description': 'Portfolio of ' + jobTitle.toLowerCase() + ' ' + author,
         'image': baseUrl + touchIcon,
         'url': baseUrl,
       },

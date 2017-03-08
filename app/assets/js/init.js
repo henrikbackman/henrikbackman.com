@@ -4,7 +4,7 @@ var HB = HB || {};
 
 HB.main = function() {
   var itemLength = $('.item').length,
-      expandInterval = 80,
+      expandInterval = 60,
       isAnimating = false;
 
   var setupToggle = function() {

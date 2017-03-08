@@ -3,70 +3,8 @@ extends layout
 block content
   ul.projects
     - each project in data.projects
-      li.item
-        figure
-          if project.url
-            a(href='#{project.url}', rel='nofollow', target='_blank')
-              img(src='#{data.imagePath}#{project.image}?v=#{project.added}', alt='#{project.title}')
-          else
-            img(src='#{data.imagePath}#{project.image}?v=#{project.added}', alt='#{project.title}')
-          figcaption
-            h2
-              if project.url
-                a(href='#{project.url}', rel='nofollow', target='_blank') #{project.title}
-              else
-                =project.title
-            button.toggle-info
-            .info-wrapper
-              .info
-                if project.description
-                  h3 #{project.description}
-                p
-                  strong Company: 
-                  a(href='#{project.company.url}', rel='nofollow', target='_blank') #{project.company.name}
-                if project.year
-                  p
-                    strong Year: 
-                    =project.year
-                if project.techniques
-                  ul.techniques
-                    li
-                      strong Techniques: 
-                    - each technique in project.techniques
-                      li #{technique}
-                if project.awards
-                  .awards-wrapper
-                    h3 Awards
-                    ul.awards
-                      - each award in project.awards
-                        li(class='#{award.placement}')
-                          h4
-                            a(href='#{award.url}', rel='nofollow', target='_blank') #{award.title}
-                          p
-                            strong Category: 
-                            =award.category
-                          p
-                            strong Year: 
-                            =award.year
-    li.contact
-      h2 Contact
-      div(itemscope='', itemtype='http://schema.org/Person')
-        meta(itemprop='name', content='#{data.title}')
-        meta(itemprop='image', content='#{data.meta.touch_icon}')
-        meta(itemprop='jobtitle', content='GUI developer')
-        ul
-          li(itemprop='telephone')
-            a(href='tel:#{data.about.phone.compressed}') #{data.about.phone.formatted}
-          li
-            a(href='mailto:#{data.about.email}')
-              span(itemprop='email') #{data.about.email}
-          - each social in data.about.social
-            li
-              a(href='#{social.url}', rel='nofollow', target='_blank') #{social.name}
-        span(itemprop='address', itemscope='', itemtype='http://schema.org/PostalAddress')
-          meta(itemprop='addressLocality', content='Stockholm')
-          meta(itemprop='postalCode', content='10573')
-          meta(itemprop='addressCountry', content='SE')
+      include partials/_item.jade
+    include partials/_contact.jade
     li
       button#toggle-all.toggle-button(data-expanded='Collapse all', data-collapsed='Expand all')
         span Expand all

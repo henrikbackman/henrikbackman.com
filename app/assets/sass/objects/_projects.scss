@@ -39,6 +39,10 @@ $contact-image-big-size: 140px;
     }
 
     .info {
+      strong {
+        margin-right: 3px;
+      }
+
       &, a {
         color: $font-color-light;
       }
