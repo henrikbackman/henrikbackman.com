@@ -2,7 +2,7 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
     title= data.site_title
@@ -24,11 +24,12 @@ html(lang='en')
     link(rel='apple-touch-icon-precomposed', href='#{data.meta.touch_icon}?v=#{data.meta.updated}')
     meta(name='apple-mobile-web-app-title', content='henrikbackman')
   body
-    .wrap.clearfix
+    section.wrap.clearfix
       header.header
         h1= data.title
         p= data.subtitle
-      block content
-  script(src='#{data.assetPath}app.js')
-  script.
-    var _gaq=[['_setAccount','UA-3520759-2'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
+      main
+        block content
+    script(src='#{data.assetPath}app.js')
+    script.
+      var _gaq=[['_setAccount','UA-3520759-2'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
