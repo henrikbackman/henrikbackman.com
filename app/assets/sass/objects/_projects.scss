@@ -1,3 +1,6 @@
+$item-s-width: 96%;
+$item-m-width: 46%;
+$item-l-width: 29.33%;
 $contact-image-small-size: 75px;
 $contact-image-medium-size: 110px;
 $contact-image-big-size: 140px;
@@ -22,16 +25,20 @@ $contact-image-big-size: 140px;
     border-radius: $item-radius;
     box-shadow: 0 0 1px rgba(0, 0, 0, .2);
     overflow: hidden;
-    position: relative;
     vertical-align: top;
-    width: 96%;
+    width: $item-s-width;
 
     @include media(m) {
-      width: 46%;
+      transition: box-shadow .15s ease-in-out;
+      width: $item-m-width;
+
+      &:hover {
+        box-shadow: 0 3px 22px rgba(0, 0, 0, .13);
+      }
     }
 
     @include media(l) {
-      width: 29.33333%;
+      width: $item-l-width;
     }
 
     p {
@@ -52,6 +59,32 @@ $contact-image-big-size: 140px;
       box-shadow: 0 0 8px rgba(0, 0, 0, .2);
     }
 
+    figure > a {
+      display: block;
+      position: relative;
+
+      @include media(m) {
+        &:after {
+          background: rgba($white, .32);
+          box-shadow: inset 0 0 33px 3px rgba($icon-color, .06);
+          content: "";
+          height: 100%;
+          left: 0;
+          opacity: 0;
+          position: absolute;
+          transition: opacity .15s ease-in-out;
+          top: 0;
+          width: 100%;
+        }
+
+        &:hover {
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
     figcaption {
       padding: 20px 15px;
     }
@@ -61,7 +94,7 @@ $contact-image-big-size: 140px;
     box-sizing: border-box;
     padding-left: $contact-image-small-size + 15;
     position: relative;
-    width: 96%;
+    width: $item-s-width;
 
     @include media(m) {
       padding-left: $contact-image-medium-size + 30;
@@ -81,6 +114,7 @@ $contact-image-big-size: 140px;
       height: $contact-image-small-size;
       left: 0;
       position: absolute;
+      transition: box-shadow .15s ease-in-out;
       top: 0;
       width: $contact-image-small-size;
 
@@ -92,6 +126,12 @@ $contact-image-big-size: 140px;
       @include media(l) {
         height: $contact-image-big-size;
         width: $contact-image-big-size;
+      }
+    }
+
+    &:hover {
+      &:before {
+        box-shadow: -1px 2px 1px rgba(0, 0, 0, .2);
       }
     }
 
