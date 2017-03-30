@@ -14,7 +14,7 @@ html(⚡='', lang='en')
     noscript
       style(amp-boilerplate='').
         body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
-    style
+    style(amp-custom='')
       include ../../public/assets/app.css
 
     meta(name='description', content='#{data.meta.description}')
@@ -30,7 +30,7 @@ html(⚡='', lang='en')
     link(rel='author', href='#{data.meta.gplus}')
     link(rel='publisher', href='#{data.meta.gplus}')
     link(rel='shortcut icon', type='image/x-icon', href='favicon.ico?v=#{data.meta.updated}')
-    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700')
     link(rel='apple-touch-icon-precomposed', href='#{data.meta.touch_icon}?v=#{data.meta.updated}')
     meta(name='apple-mobile-web-app-title', content='henrikbackman')
   body
