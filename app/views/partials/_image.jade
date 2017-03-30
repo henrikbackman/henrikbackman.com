@@ -1,0 +1,9 @@
+if project.url
+  a(href='#{project.url}', rel='nofollow', target='_blank')
+    amp-img(src='#{data.imagePath}#{project.image}?v=#{project.added}', width='500', height='250', layout="responsive")
+      noscript
+        img(src='#{data.imagePath}#{project.image}?v=#{project.added}', width='500', height='250', alt='#{project.title})
+else
+  amp-img(src='#{data.imagePath}#{project.image}?v=#{project.added}', width='500', height='250', layout="responsive")
+    noscript
+      img(src='#{data.imagePath}#{project.image}?v=#{project.added}', width='500', height='250', alt='#{project.title})

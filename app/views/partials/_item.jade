@@ -1,10 +1,6 @@
 li.item
   figure
-    if project.url
-      a(href='#{project.url}', rel='nofollow', target='_blank')
-        img(src='#{data.imagePath}#{project.image}?v=#{project.added}', alt='#{project.title}')
-    else
-      img(src='#{data.imagePath}#{project.image}?v=#{project.added}', alt='#{project.title}')
+    include _image.jade
     figcaption
       h2
         if project.url
