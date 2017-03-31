@@ -51,6 +51,7 @@ module.exports = function() {
     },
     'projects': [
       {
+        'id': new Buffer('HM.com').toString('base64'),
         'responsive': true,
         'title': 'HM.com',
         'url': 'http://www.hm.com',
@@ -73,6 +74,7 @@ module.exports = function() {
         ],
       },
       {
+        'id': new Buffer('Köket.se').toString('base64'),
         'responsive': true,
         'title': 'Köket.se',
         'url': 'http://www.koket.se',
@@ -122,6 +124,7 @@ module.exports = function() {
         ],
       },
       {
+        'id': new Buffer('Recept.nu').toString('base64'),
         'responsive': true,
         'title': 'Recept.nu',
         'url': 'http://www.recept.nu',
@@ -144,6 +147,7 @@ module.exports = function() {
         ],
       },
       {
+        'id': new Buffer('COS').toString('base64'),
         'responsive': true,
         'title': 'COS',
         'url': 'http://www.cosstores.com',
@@ -164,6 +168,7 @@ module.exports = function() {
         ],
       },
       {
+        'id': new Buffer('& Other Stories').toString('base64'),
         'responsive': true,
         'title': '& Other Stories',
         'url': 'http://www.stories.com',
@@ -184,6 +189,7 @@ module.exports = function() {
         ],
       },
       {
+        'id': new Buffer('Weekday').toString('base64'),
         'responsive': true,
         'title': 'Weekday',
         'url': 'http://www.weekday.com',
@@ -204,6 +210,7 @@ module.exports = function() {
         ],
       },
       {
+        'id': new Buffer('Cheap Monday').toString('base64'),
         'responsive': true,
         'title': 'Cheap Monday',
         'url': 'http://www.cheapmonday.com',
@@ -224,6 +231,7 @@ module.exports = function() {
         ],
       },
       {
+        'id': new Buffer('203 Web Group').toString('base64'),
         'responsive': false,
         'title': '203 Web Group',
         'url': 'http://www.203webgroup.se',
@@ -242,6 +250,7 @@ module.exports = function() {
         ],
       },
       {
+        'id': new Buffer('Zuperbox').toString('base64'),
         'responsive': false,
         'title': 'Zuperbox',
         'url': 'http://www.zuperbox.se',
@@ -261,6 +270,7 @@ module.exports = function() {
         ],
       },
       {
+        'id': new Buffer('Sony Ericsson').toString('base64'),
         'responsive': false,
         'title': 'Sony Ericsson',
         'url': '',

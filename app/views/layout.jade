@@ -2,6 +2,7 @@ doctype html
 html(⚡='', lang='en')
   head
     meta(charset='utf-8')
+    script(async='', custom-element='amp-analytics', src='https://cdn.ampproject.org/v0/amp-analytics-0.1.js')
     script(async='', src='https://cdn.ampproject.org/v0.js')
     link(rel='canonical', href='http://www.henrikbackman.com')
     meta(name='viewport', content='width=device-width,minimum-scale=1,initial-scale=1')
@@ -40,6 +41,16 @@ html(⚡='', lang='en')
         p= data.subtitle
       main
         block content
-    script(src='#{data.assetPath}app.js')
-    script.
-      var _gaq=[['_setAccount','UA-3520759-2'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
+    amp-analytics(type='googleanalytics')
+      script(type='application/json').
+        {
+          "vars": {
+            "account": "UA-3520759-2"
+          },
+          "triggers": {
+            "trackPageview": {
+              "on": "visible",
+              "request": "pageview"
+            }
+          }
+        }

@@ -7,7 +7,9 @@ li.item
           a(href='#{project.url}', rel='nofollow', target='_blank') #{project.title}
         else
           =project.title
-      button.toggle-info
+      input(id='#{project.id}', type='checkbox')
+      label.toggle-info(for='#{project.id}')
+      //- button.toggle-info
       .info-wrapper
         .info
           if project.description
