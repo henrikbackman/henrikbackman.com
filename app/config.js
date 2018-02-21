@@ -1,6 +1,6 @@
 'use strict';
 
-const baseUrl = 'http://www.henrikbackman.com',
+const baseUrl = 'https://www.henrikbackman.com',
       author = 'Henrik Backman',
       jobTitle = 'Front-end developer',
       assetPath = '/assets/',
