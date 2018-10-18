@@ -7,4 +7,5 @@
 # Others
 newrelic_agent.log
 npm-debug.log*
+package-lock.json
 /public
