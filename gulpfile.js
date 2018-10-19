@@ -26,6 +26,7 @@ const assets = {
     vendor: 'node_modules/jquery/dist/jquery.min.js',
   },
   images: 'app/assets/img/**/*',
+  fonts: 'app/assets/fonts/**/*',
   environment: [
     'routes/**/*',
     'app/config.js',
@@ -130,6 +131,12 @@ gulp.task('images', function() {
     .pipe(gulp.dest('public/assets/img'));
 });
 
+// Copy font files
+gulp.task('fonts', function() {
+  return gulp.src(assets.fonts)
+    .pipe(gulp.dest('public/assets/fonts'));
+});
+
 // Copy statics
 gulp.task('statics', function() {
   return gulp.src(assets.statics)
@@ -139,6 +146,7 @@ gulp.task('statics', function() {
 // Watch for changes
 gulp.task('watch', function () {
   gulp.watch(assets.images, ['images']);
+  gulp.watch(assets.fonts, ['fonts']);
   gulp.watch(assets.sass.all, ['sass']);
   gulp.watch(assets.scripts.vendor, ['scripts']);
   gulp.watch(assets.scripts.app, ['scripts']);
@@ -151,6 +159,7 @@ gulp.task('build', function(callback) {
       'sass',
       'scripts',
       'images',
+      'fonts',
       'statics',
     ],
     callback);

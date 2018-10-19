@@ -7,9 +7,6 @@ li(class='item #{project.shortname}')
           a(href='#{project.url}', rel='nofollow', target='_blank') #{project.title}
         else
           =project.title
-      input(id='#{project.id}', type='checkbox')
-      label.toggle-info(for='#{project.id}')
-      //- button.toggle-info
       .info-wrapper
         .info
           if project.description

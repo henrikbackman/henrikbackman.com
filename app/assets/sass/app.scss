@@ -2,14 +2,13 @@
 
 // Base
 @import "base/mixins";
-@import "base/colors";
 @import "base/reset";
 @import "base/fonts";
-@import "base/links";
-@import "base/settings";
+
+// Venor
+@import "vendor/fontawesome";
+@import "vendor/brands";
+@import "vendor/solid";
 
 // Objects
 @import "objects/site-base";
-@import "objects/projects";
-@import "objects/toggle-info";
-@import "objects/awards";

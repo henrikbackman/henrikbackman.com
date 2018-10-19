@@ -37,8 +37,9 @@ html(⚡='', lang='en')
   body
     section.wrap.clearfix
       header.header
-        h1= data.title
-        p= data.subtitle
+        div.head-wrap
+          h1= data.title
+          p= data.subtitle
       main
         block content
     amp-analytics(type='googleanalytics')

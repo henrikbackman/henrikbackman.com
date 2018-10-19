@@ -3,8 +3,9 @@ extends layout
 block content
   ul.projects
     - each project in data.projects
-      include partials/_item.jade
+      if project.active
+        include partials/_item.jade
+    - each company in data.companys
+      p
+        =company.name
     include partials/_contact.jade
-    //- li
-    //-   button#toggle-all.toggle-button(data-expanded='Collapse all', data-collapsed='Expand all')
-    //-     span Expand all
