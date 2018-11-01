@@ -1,16 +1,18 @@
-li(class='item #{project.shortname}')
+li(class='item')
   figure
     include _image.jade
     figcaption
-      h2
-        if project.url
-          a(href='#{project.url}', rel='nofollow', target='_blank') #{project.title}
-        else
-          =project.title
+      h3
+        span #{project.title}
+          if project.url
+            a(href='#{project.url}', rel='nofollow', target='_blank')
+              i.fa.fa-external-link-alt
+      button.read-more(data-text='Read more')
+        i.fa.fa-fw.fa-ellipsis-h
       .info-wrapper
         .info
           if project.description
-            h3 #{project.description}
+            h4 #{project.description}
           p
             strong Company:
             a(href='#{project.company.url}', rel='nofollow', target='_blank') #{project.company.name}
@@ -26,11 +28,11 @@ li(class='item #{project.shortname}')
                 li #{technique}
           if project.awards
             .awards-wrapper
-              h3 Awards
+              h4 Awards
               ul.awards
                 - each award in project.awards
                   li(class='#{award.placement}')
-                    h4
+                    h5
                       a(href='#{award.url}', rel='nofollow', target='_blank') #{award.title}
                     p
                       strong Category:
@@ -38,3 +40,5 @@ li(class='item #{project.shortname}')
                     p
                       strong Year:
                       =award.year
+      button.read-less
+        i.fa.fa-fw.fa-times

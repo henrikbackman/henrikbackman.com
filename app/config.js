@@ -38,14 +38,17 @@ module.exports = function() {
         {
           'name': 'LinkedIn',
           'url': 'http://se.linkedin.com/pub/henrik-backman/5/140/a4a',
+          'icon': 'linkedin',
         },
         {
           'name': 'GitHub',
           'url': 'https://github.com/henrikbackman',
+          'icon': 'github',
         },
         {
           'name': 'Twitter',
           'url': 'https://twitter.com/HenrikBackman',
+          'icon': 'twitter',
         },
       ],
     },
@@ -54,7 +57,7 @@ module.exports = function() {
         'id': new Buffer('HM.com').toString('base64'),
         'active': true,
         'responsive': true,
-        'title': 'HM.com',
+        'title': 'H&M',
         'url': 'http://www.hm.com',
         'image': 'hm.jpg',
         'description': 'Responsive ecommerce site',
@@ -303,43 +306,80 @@ module.exports = function() {
     'companys': [
       {
         'name': 'H&M',
-      },
-      {
-        'name': 'COS',
-      },
-      {
-        'name': 'Monki',
-      },
-      {
-        'name': '& Other Stories',
-      },
-      {
-        'name': 'Weekday',
-      },
-      {
-        'name': 'Cheap Monday',
-      },
-      {
-        'name': 'TV4',
-      },
-      {
-        'name': 'Köket',
-      },
-      {
-        'name': 'Sony Ericsson',
+        'icon': 'hm.svg',
+        'size': 'is-big',
+        'width': '100',
+        'height': '66',
       },
       {
         'name': 'Nokia',
+        'icon': 'nokia.svg',
+        'size': 'is-small',
+        'width': '100',
+        'height': '17',
       },
       {
-        'name': 'Betalo',
+        'name': 'COS',
+        'icon': 'cos.svg',
+        'size': 'is-normal',
+        'width': '100',
+        'height': '32',
+      },
+      {
+        'name': '& Other Stories',
+        'icon': 'stories.svg',
+        'size': 'is-small',
+        'width': '100',
+        'height': '17',
+      },
+      {
+        'name': 'Sony Ericsson',
+        'icon': 'sony-ericsson.svg',
+        'size': 'is-medium',
+        'width': '100',
+        'height': '65',
+      },
+      {
+        'name': 'Weekday',
+        'icon': 'weekday.svg',
+        'size': 'is-small',
+        'width': '100',
+        'height': '20',
+      },
+      {
+        'name': 'TV4',
+        'icon': 'tv4.svg',
+        'size': 'is-big',
+        'width': '100',
+        'height': '100',
+      },
+      {
+        'name': 'Cheap Monday',
+        'icon': 'cheap-monday.svg',
+        'size': 'is-normal',
+        'width': '100',
+        'height': '46',
+      },
+      {
+        'name': 'Köket',
+        'icon': 'koket.svg',
+        'size': 'is-big',
+        'width': '100',
+        'height': '87',
+      },
+      {
+        'name': 'Monki',
+        'icon': 'monki.svg',
+        'size': 'is-small',
+        'width': '100',
+        'height': '19',
       },
       {
         'name': 'Jobylon',
+        'size': 'is-',
+        'width': '100',
+        'height': '',
       },
-      {
-        'name': 'HiQ',
-      }
     ],
   };
 };

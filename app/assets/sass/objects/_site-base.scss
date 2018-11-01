@@ -5,28 +5,36 @@ body {
   @include font-size(13, 1.6);
 }
 
-.header {
+h1, h2, h3 {
+  font-family: $headline-font-stack;
+  text-transform: uppercase;
+}
+
+.header,
+.contact {
   background: #333;
   color: #f5f5f5;
-  padding: 60px 20px 20px;
   text-align: center;
+}
 
-  &:before {
-    background: url(#{$asset-path}/img/henrikbackman-2018.jpg) 50% 50% no-repeat;
-    background-size: contain;
-    border-radius: 31% 67% 73% 33% / 34% 34% 74% 74%;
-    box-shadow: 0 1px rgba(0, 0, 0, .2);
-    content: "";
-    display: inline-block;
-    height: 80px;
-    margin-right: 25px;
-    vertical-align: middle;
-    width: 80px;
-  }
+h1 {
+  @include font-size(34);
+  letter-spacing: .2px;
+}
 
-  .head-wrap {
-    display: inline-block;
-    text-align: left;
-    vertical-align: middle;
+h2 {
+  @include font-size(26);
+  letter-spacing: .3px;
+  text-align: center;
+}
+
+.projects,
+.customers {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $content-max-width;
+
+  &:target h2 {
+    text-decoration: underline;
   }
 }

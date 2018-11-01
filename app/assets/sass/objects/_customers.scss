@@ -1,0 +1,54 @@
+.customers {
+  margin-bottom: 70px;
+  padding: 0 20px;
+  text-align: center;
+
+  ul {
+    @include no-list;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 15px 20px;
+    vertical-align: middle;
+
+    amp-img,
+    img {
+      display: block;
+      width: 70px;
+    }
+
+    img {
+      filter: grayscale(1);
+      opacity: .4;
+      transition: filter .14s ease-in-out, opacity .14s ease-in-out;
+    }
+
+    &.is-small {
+      amp-img,
+      img {
+        width: 100px;
+      }
+    }
+
+    &.is-medium {
+      amp-img,
+      img {
+        width: 80px;
+      }
+    }
+
+    &.is-big {
+      amp-img,
+      img {
+        width: 45px;
+      }
+    }
+  }
+
+  li:hover img,
+  &:target li img {
+    filter: none;
+    opacity: 1;
+  }
+}

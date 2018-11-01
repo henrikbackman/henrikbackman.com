@@ -1,0 +1,13 @@
+amp-analytics(type='googleanalytics')
+  script(type='application/json').
+    {
+      "vars": {
+        "account": "UA-3520759-2"
+      },
+      "triggers": {
+        "trackPageview": {
+          "on": "visible",
+          "request": "pageview"
+        }
+      }
+    }

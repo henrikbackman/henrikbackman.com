@@ -1,0 +1,58 @@
+.menu {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 80px;
+  position: sticky;
+  text-align: center;
+  top: 0;
+  z-index: 1;
+
+  ul {
+    @include no-list;
+  }
+
+  li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  a {
+    color: inherit;
+    display: block;
+    @include font-size(15)
+    letter-spacing: .5px;
+    padding: 23px 30px 19px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      background: rgba(0, 0, 0, .06);
+    }
+
+    &.me {
+      margin: -15px 60px -20px 0;
+      padding: 0;
+
+      img,
+      amp-img {
+        border-radius: 50%;
+        box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .2);
+        filter: grayscale(1);
+        height: 100px;
+        transition: filter .14s ease-in-out;
+        width: 100px;
+      }
+
+      &:hover {
+        background: 0 0;
+      }
+    }
+  }
+
+  &:hover a.me {
+    img,
+    amp-img {
+      filter: none;
+    }
+  }
+}

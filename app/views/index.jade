@@ -1,11 +1,19 @@
 extends layout
 
 block content
-  ul.projects
-    - each project in data.projects
-      if project.active
-        include partials/_item.jade
-    - each company in data.companys
-      p
-        =company.name
-    include partials/_contact.jade
+  .projects#work
+    h2 Selected work
+    ul
+      - each project in data.projects
+        if project.active
+          include partials/_item.jade
+  .customers#customers
+    h2 Customers
+    ul
+      - each customer in data.companys
+        if customer.icon
+          li(class='#{customer.size}')
+            amp-img(src='#{data.imagePath}logos/#{customer.icon}', width='#{customer.width}', height='#{customer.height}', layout='responsive')
+              noscript
+                img(src='#{data.imagePath}logos/#{customer.icon}', width='#{customer.width}', height='#{customer.height}', alt='#{customer.name}')
+  include partials/_contact.jade

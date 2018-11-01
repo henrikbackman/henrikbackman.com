@@ -1,11 +1,16 @@
-$font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-face-stack: 'Inter UI', $font-stack;
+$base-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-face-stack: 'Inter UI', $base-font-stack;
+$headline-font-stack: 'Open Sans Condensed', $base-font-stack;
 
 $base-font-size: 16;
 
 $asset-path: "/assets";
 $font-path: $asset-path + "/fonts";
 $fa-font-path: $font-path;
+
+$content-max-width: 1600px;
+
+$highlight-color: #fd3f47;
 
 @mixin media($breakpoint) {
   @if $breakpoint == 'm' {
@@ -55,4 +60,10 @@ $fa-font-path: $font-path;
   @if $line-height != null {
     line-height: $line-height;
   }
+}
+
+@mixin no-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

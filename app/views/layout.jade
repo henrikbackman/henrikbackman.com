@@ -36,22 +36,9 @@ html(⚡='', lang='en')
     meta(name='apple-mobile-web-app-title', content='henrikbackman')
   body
     section.wrap.clearfix
-      header.header
-        div.head-wrap
-          h1= data.title
-          p= data.subtitle
+      include partials/_header.jade
+      include partials/_menu.jade
       main
         block content
-    amp-analytics(type='googleanalytics')
-      script(type='application/json').
-        {
-          "vars": {
-            "account": "UA-3520759-2"
-          },
-          "triggers": {
-            "trackPageview": {
-              "on": "visible",
-              "request": "pageview"
-            }
-          }
-        }
+    include partials/_analytics.jade
+    script(async='', src='/assets/app.js')

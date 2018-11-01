@@ -105,9 +105,9 @@ gulp.task('sass', function () {
     }).on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: [
-        'last 4 versions',
-        'ie >= 9',
-        'iOS >= 8',
+        'last 3 versions',
+        'ie >= 10',
+        'iOS >= 10',
       ],
       cascade: false,
     }))
